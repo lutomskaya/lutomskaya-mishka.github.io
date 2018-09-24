@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анна Лютомская](https://up.htmlacademy.ru/adaptive/15/user/363451).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья Майстренко] (https://htmlacademy.ru/profile/natalie).
 
 ---
 
