@@ -7,11 +7,8 @@
 }
 
 .site-list__link {
+  @include title (17px, 24px);
   text-decoration: none;
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
-  font-family: opensans, Arial, sans-serif;
   color: #000000;
 
   &:hover {

@@ -1,7 +1,7 @@
 .btn {
   @include reset;
   @include center;
-  @include title(17px, 20px);
+  @include title (17px, 20px);
   display: block;
   padding: 10px;
   text-transform: uppercase;
@@ -16,6 +16,6 @@
 
   &:active {
     background-color: #444444;
-    color: rgba(255, 255, 255, 0.3);
+    color: #ffffff4d;
   }
 }

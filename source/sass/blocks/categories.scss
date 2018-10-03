@@ -12,19 +12,19 @@
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
-  font-family: opensans, Arial, sans-serif;
-  
+  font-family: "opensans", "Arial", sans-serif;
 }
 
 .categories__list {
   @include reset;
 }
+
 .categories__link {
   text-decoration: none;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
-  font-family: opensans, Arial, sans-serif;
+  font-family: "opensans", "Arial", sans-serif;
   color: #ffffff;
 }
 
