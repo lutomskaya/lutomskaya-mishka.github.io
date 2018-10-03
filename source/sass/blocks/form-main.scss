@@ -1,0 +1,18 @@
+.form-main {
+  @include center;
+  @include container;
+}
+
+.form-main__title {
+  @include reset;
+  @include title (27px, 30px);
+  background-color: #f1f1f1;
+  padding: 80px 40px;
+}
+.form-main__text {
+  @include reset;
+  @include text (13px, 24px);
+  color: #444444;
+  padding: 30px;
+  text-align: left;
+}

@@ -1,0 +1,54 @@
+.reviews {
+  @include container;
+}
+
+.reviews__title {
+  @include title (25px, 30px);
+  @include reset;
+  padding: 40px 30px;
+}
+
+.reviews__item {
+  @include reset;
+  padding: 0 30px;
+}
+
+.reviews__text {
+  @include reset;
+  @include text (15px, 30px);
+  color: #444444;
+  padding-bottom: 20px;
+}
+
+.reviews__author-name {
+  @include title (17px, 24px);
+}
+
+.reviews__author-nick {
+  @include text (17px, 30px);
+}
+
+.reviews__toggles {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.reviews__btn-nav {
+  @include reset;
+  display: block;
+  padding: 20px 79px;
+  border: 1px solid #ececec;
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+
+  &--back {
+    background-image: url("../../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../../img/icon-right-arrow.svg");
+  }
+}

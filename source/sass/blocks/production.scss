@@ -1,0 +1,36 @@
+.production {
+  @include reset;
+  @include center;
+  @include container;
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 60px;
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 #ececec;
+  }
+
+  &:active {
+    box-shadow: 0 4px 4px 0 #ececec;
+  }
+}
+
+.production__process {
+  @include reset;
+  @include title (17px, 24px);
+  text-align: left;
+  padding: 30px;
+  padding-left: 120px;
+}
+
+.production__description {
+  @include reset;
+  @include text (13px, 24px);
+  color: #444444;
+  text-align: left;
+  padding: 30px 60px;
+}
+
+.production__btn {
+  margin-bottom: 30px;
+}

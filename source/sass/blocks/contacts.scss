@@ -1,0 +1,35 @@
+.contacts {
+  @include container;
+  @include text (15px, 30px);
+  color: #444444;
+}
+
+.contacts__title {
+  @include title (18px, 30px);
+  @include reset;
+  color: #000000;
+  padding: 40px 30px;
+}
+
+.contacts__item {
+  padding: 0 30px;
+  display: flex;
+}
+
+.contacts__field {
+  padding-right: 35px;
+}
+
+.contacts__link {
+  @include reset;
+  color: #444444;
+}
+
+.contacts__text {
+  @include reset;
+  padding-right: 30px;
+}
+
+.contacts__map {
+  margin-bottom: 40px;
+}

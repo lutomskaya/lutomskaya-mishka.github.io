@@ -1,0 +1,9 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.copyright__text {
+  @include title (19px, 18px);
+  padding-right: 50px;
+}

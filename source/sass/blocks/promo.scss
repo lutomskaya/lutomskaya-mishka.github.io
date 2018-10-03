@@ -1,0 +1,31 @@
+.promo {
+  @include container;
+  width: 100%;
+  text-align: left;
+}
+
+.promo__title {
+  @include title(25px, 30px);
+}
+
+.promo__label {
+  @include title(17px, 20px);
+  color: #63d1bb;
+  text-transform: uppercase;
+}
+
+.promo__text {
+  @include text(15px, 24px);
+  color: #444444;
+}
+
+.promo__image {
+  @include center;
+  width: 100%;
+}
+
+.promo__price {
+  @include title(17px, 24px);
+  @include center;
+  color: #444444;
+}

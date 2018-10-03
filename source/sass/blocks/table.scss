@@ -1,0 +1,14 @@
+.table {
+  @include text (15px, 20px);
+  color: #444444;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table tr {
+  border-bottom: 1px solid #ececec;
+}
+
+.table__field {
+  padding: 10px 30px;
+}

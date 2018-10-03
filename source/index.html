@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a href="#" class="page-header__logo"><img src="http://placehold.it/150x100" alt="Mishka" class="page-header__logo-image">
+      <a href="#" class="page-header__logo"><img src="../img/logo-mobile.svg" width="85.589px" height="35.034px" alt="Mishka">
       </a>
       <nav class=" page-header__nav main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -59,7 +60,7 @@
           </tr>
         </table>
         <div class="promo__image">
-          <img src="http://placehold.it/150x100" alt="Вязаные корзинки">
+          <img src="img/triple-set-mobile@1x.jpg" width="260px" height="315px" alt="Вязаные корзинки">
         </div>
         <p class="promo__price">Цена: 990 руб.</p>
         <a href="#" class="promo__btn btn">Заказать</a>
@@ -86,9 +87,9 @@
               <cite class="reviews__author-name">Анастасия Красильникова</cite>
               <span class="reviews__author-nick">@misssssiskras</span>
             </blockquote>
-            <div class="reviews__toggle slider__toggles">
-              <button class="reviews__btn-nav reviews__btn-nav--back" type="button">Предыдущий отзыв</button>
-              <button class="reviews__btn-nav reviews__btn-nav--next" type="button">Следующий отзыв</button>
+            <div class="reviews__toggles slider__toggles">
+              <button class="reviews__btn-nav reviews__btn-nav--back" aria-label="Предыдущий отзыв" type="button"></button>
+              <button class="reviews__btn-nav reviews__btn-nav--next" aria-label="Следующий отзыв" type="button"></button>
             </div>
           </div>
           <a href="#" class="reviews__btn btn">Написать</a>
@@ -97,12 +98,16 @@
       <section class="contacts">
         <div class="coontacts__inner">
           <h2 class="contacts__title">Контакты</h2>
-          <span class="contacts__field">e-mail:</span>
-          <a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a>
-          <span class="contacts__field">адрес:</span>
-          <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+          <div class="contacts__item">
+            <span class="contacts__field">e-mail:</span>
+            <a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a>
+          </div>
+          <div class="contacts__item">
+            <span class="contacts__field">адрес:</span>
+            <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+          </div>
           <div class="contacts__map">
-            <img src="http://placehold.it/150x100" alt="Как нас найти">
+            <img src="img/map-mobile@1x.jpg" width="320px" height="460px" alt="Как нас найти">
           </div>
           <a href="#" class="contacts__btn btn">Напишите нам</a>
         </div>
@@ -113,33 +118,42 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a href="https://www.instagram.com/htmlacademy" class="social__link social__link--instagram">Мы в Инстаграме</a>
+              <a href="https://www.instagram.com/htmlacademy" class="social__link social__link--instagram" aria-label="Мы в Инстаграме">
+                <img src="img/icon-insta.svg" width="30px" height="30px" alt="instagram">
+              </a>
             </li>
             <li class="social__item">
-              <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--facebook">Мы в Фейсбуке</a>         </li>
+              <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--facebook" aria-label="Мы в Фейсбуке">
+                <img src="img/icon-fb.svg" width="30px" height="30px" alt="facebook">
+              </a>
+            </li>
             <li class="social__item">
-              <a href="https://www.twitter.com/htmlacademy" class="social__link social__link--twitter">Мы в Твиттере</a>
+              <a href="https://www.twitter.com/htmlacademy" class="social__link social__link--twitter" aria-label="Мы в Твиттере">
+                <img src="img/icon-twitter.svg" width="30px" height="30px" alt="twitter">
+              </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано:</b>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link" aria-label="HTML Academy">
+            <img src="img/logo-htmlacademy.svg" width="35px" height="35px" alt="HTML Academy">
+          </a>
         </div>
-      </div>>
+      </div>
     </footer>
-    <div class="popup">
-      <div class="popup__inner">
-        <p class="popup__title">Добавить в корзину</p>
-        <span>Выберите размер:</span>
-        <form class="popup-form" action="https://echo.htmlacademy.ru/" method="get">
+    <div class="modal">
+      <div class="modal__inner">
+        <p class="modal__title">Добавить в корзину</p>
+        <span class="modal__label">Выберите размер:</span>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
           <input type="radio" id="smallsize" name="size" value="small" checked>
-          <label for="smallsize" class="popup-form__item">S</label>
+          <label for="smallsize" class="modal-form__item">S</label>
           <input type="radio" id="mediumsize" name="size" value="medium">
-          <label for="mediumsize" class="popup-form__item">M</label>
+          <label for="mediumsize" class="modal-form__item">M</label>
           <input type="radio" id="largesize" name="size" value="large">
-          <label for="largesize" class="popup-form__item">L</label>
-          <button type="submit" class="popup-form__btn btn">Добавить</button>
+          <label for="largesize" class="modal-form__item">L</label>
+          <button type="submit" class="modal-form__btn btn">Добавить</button>
         </form>
       </div>
     </div>

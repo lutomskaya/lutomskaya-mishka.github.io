@@ -1,0 +1,21 @@
+.btn {
+  @include reset;
+  @include center;
+  @include title(17px, 20px);
+  display: block;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #444444;
+  border: 2px solid #444444;
+  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    background-color: #444444;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

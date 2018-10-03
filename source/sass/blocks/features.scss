@@ -1,0 +1,42 @@
+.features {
+  @include container;
+}
+
+.features__title {
+  @include title (25px, 30px);
+}
+
+.features__list {
+  @include reset;
+}
+
+.features__item {
+  @include title (17px, 20px);
+  padding: 50px 30px 40px 30px;
+  background-repeat: no-repeat;
+  background-position: 15% 0;
+
+  &--eco {
+    background-image: url(../../img/icon-feature-flower.svg);
+  }
+
+  &--style {
+    background-image: url(../../img/icon-feature-money.svg);
+  }
+
+  &--like {
+    background-image: url(../../img/icon-feature-heart.svg);
+  }
+
+  &--manually {
+    background-image: url(../../img/icon-feature-ball.svg);
+  }
+
+  &--manufacturer {
+    background-image: url(../../img/icon-feature-rocket.svg);
+  }
+
+  &--delivery {
+    background-image: url(../../img/icon-feature-gift.svg);
+  }
+}
