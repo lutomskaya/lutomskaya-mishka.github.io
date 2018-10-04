@@ -7,16 +7,16 @@
 
 .product__item {
   &:hover {
-    box-shadow: 0 4px 10px 0 #ececec;
+    box-shadow: 0 4px 10px 0 $gray--lighten;
   }
 
   &:active {
-    box-shadow: 0 4px 4px 0 #ececec;
+    box-shadow: 0 4px 4px 0 $gray--lighten;
   }
 }
 
 .product__description-header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $gray--lighten;
 }
 
 .product__name {
@@ -28,14 +28,14 @@
 .product__text {
   @include reset;
   @include text (13px, 30px);
-  color: #444444;
+  color: $color-grey;
   padding-bottom: 10px;
 }
 
 .product__description-footer {
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $gray--lighten;
   padding: 20px;
 }
 

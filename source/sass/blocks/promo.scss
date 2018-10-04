@@ -10,13 +10,13 @@
 
 .promo__label {
   @include title(17px, 20px);
-  color: #63d1bb;
+  color: $color-primary;
   text-transform: uppercase;
 }
 
 .promo__text {
   @include text(15px, 24px);
-  color: #444444;
+  color: $color-grey;
 }
 
 .promo__image {
@@ -27,5 +27,5 @@
 .promo__price {
   @include title(17px, 24px);
   @include center;
-  color: #444444;
+  color: $color-grey;
 }

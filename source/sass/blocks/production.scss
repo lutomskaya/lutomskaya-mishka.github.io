@@ -3,15 +3,15 @@
   @include center;
   @include container;
   display: flex;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $gray--lighten;
   margin-bottom: 60px;
 
   &:hover {
-    box-shadow: 0 4px 10px 0 #ececec;
+    box-shadow: 0 4px 10px 0 $gray--lighten;
   }
 
   &:active {
-    box-shadow: 0 4px 4px 0 #ececec;
+    box-shadow: 0 4px 4px 0 $gray--lighten;
   }
 }
 
@@ -26,7 +26,7 @@
 .production__description {
   @include reset;
   @include text (13px, 24px);
-  color: #444444;
+  color: $color-grey;
   text-align: left;
   padding: 30px 60px;
 }

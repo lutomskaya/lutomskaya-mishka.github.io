@@ -6,6 +6,6 @@
   @include reset;
   @include center;
   @include title (27px, 30px);
-  background-color: #f1f1f1;
+  background-color: $color-background-darken;
   padding: 80px 40px;
 }

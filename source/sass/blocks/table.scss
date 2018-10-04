@@ -1,12 +1,12 @@
 .table {
   @include text (15px, 20px);
-  color: #444444;
+  color: $color-grey;
   border-collapse: collapse;
   width: 100%;
 }
 
 .table tr {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid $gray--lighten;
 }
 
 .table__field {

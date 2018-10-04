@@ -1,13 +1,13 @@
 .contacts {
   @include container;
   @include text (15px, 30px);
-  color: #444444;
+  color: $color-grey;
 }
 
 .contacts__title {
   @include title (18px, 30px);
   @include reset;
-  color: #000000;
+  color: $color-black;
   padding: 40px 30px;
 }
 
@@ -22,7 +22,7 @@
 
 .contacts__link {
   @include reset;
-  color: #444444;
+  color: $color-grey;
 }
 
 .contacts__text {

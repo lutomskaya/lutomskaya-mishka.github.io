@@ -13,7 +13,7 @@
 
 .modal__label {
   @include text (15px, 30px);
-  color: #444444;
+  color: $color-grey;
 }
 
 .modal-form {
@@ -33,6 +33,6 @@
 
 .modal-form__btn {
   background-color: #63d1bb;
-  color: #ffffff;
+  color: $color-background-lighten;
   border: none;
 }

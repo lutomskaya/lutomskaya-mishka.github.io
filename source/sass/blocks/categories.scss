@@ -9,10 +9,7 @@
 }
 
 .categories__title {
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: 700;
-  font-family: "opensans", "Arial", sans-serif;
+  @include title (27px, 30px);
 }
 
 .categories__list {
@@ -20,12 +17,9 @@
 }
 
 .categories__link {
+  @include title (19px, 24px);
   text-decoration: none;
-  font-size: 19px;
-  line-height: 24px;
-  font-weight: 700;
-  font-family: "opensans", "Arial", sans-serif;
-  color: #ffffff;
+  color: $color-background-lighten;
 }
 
 .categories__item {

@@ -16,7 +16,7 @@
 .reviews__text {
   @include reset;
   @include text (15px, 30px);
-  color: #444444;
+  color: $color-grey;
   padding-bottom: 20px;
 }
 
@@ -38,7 +38,7 @@
   @include reset;
   display: block;
   padding: 20px 79px;
-  border: 1px solid #ececec;
+  border: 1px solid $gray--lighten;
   background-color: inherit;
   background-repeat: no-repeat;
   background-position: 50% 50%;
