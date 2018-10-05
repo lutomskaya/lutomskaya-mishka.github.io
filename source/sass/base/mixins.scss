@@ -1,0 +1,30 @@
+@mixin reset {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@mixin container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@mixin title ($size, $height) {
+  font-family: $font;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 700;
+}
+
+@mixin text ($size, $height) {
+  font-family: $font;
+  font-size: $size;
+  line-height: $height;
+  font-weight: 400;
+}

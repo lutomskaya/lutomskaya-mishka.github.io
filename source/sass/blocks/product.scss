@@ -1,0 +1,44 @@
+.product {
+  @include reset;
+  @include center;
+  @include container;
+  margin-top: 30px;
+}
+
+.product__item {
+  &:hover {
+    box-shadow: 0 4px 10px 0 $gray--lighten;
+  }
+
+  &:active {
+    box-shadow: 0 4px 4px 0 $gray--lighten;
+  }
+}
+
+.product__description-header {
+  border-bottom: 1px solid $gray--lighten;
+}
+
+.product__name {
+  @include reset;
+  @include title (17px, 24px);
+  padding: 20px;
+}
+
+.product__text {
+  @include reset;
+  @include text (13px, 30px);
+  color: $color-grey;
+  padding-bottom: 10px;
+}
+
+.product__description-footer {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid $gray--lighten;
+  padding: 20px;
+}
+
+.product__price {
+  @include title (15px, 24px);
+}
