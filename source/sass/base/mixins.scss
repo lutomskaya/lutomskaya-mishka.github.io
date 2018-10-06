@@ -10,8 +10,8 @@
   margin: 0 auto;
 }
 
-@mixin container {
-  max-width: 320px;
+@mixin container ($max-width) {
+  max-width: $max-width;
   margin: 0 auto;
 }
 

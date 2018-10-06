@@ -1,0 +1,15 @@
+.main-nav {
+  @include center;
+  padding: 0 30px;
+  background-color: $color-background-lighten;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    padding: 0 50px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}

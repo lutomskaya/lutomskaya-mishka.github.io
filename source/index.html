@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a href="#" class="page-header__logo"><img src="../img/logo-mobile.svg" width="85.589px" height="35.034px" alt="Mishka">
-      </a>
       <nav class=" page-header__nav main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__inner">
           <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__logo">
+              <a href="#" class="site-list__link"><img src="../img/logo-mobile.svg" width="85.589px" height="35.034px" alt="Mishka">
+              </a>
+            </li>
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -24,6 +27,17 @@
             </li>
             <li class="site-list__item site-list__item--basket">
               <a class="site-list__link" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+          <ul class="site-list site-list__promo">
+            <li class="site-list__item site-list-item__promo">
+              <a class="site-list__link" href="#">Новые поступления</a>
+            </li>
+            <li class="site-list__item site-list-item__promo">
+              <a class="site-list__link" href="#">Распродажа</a>
+            </li>
+            <li class="site-list__item site-list-item__promo site-list-item__promo--delivery">
+              <p class="site-list__text">Бесплатная доставка по России</p>
             </li>
           </ul>
         </div>

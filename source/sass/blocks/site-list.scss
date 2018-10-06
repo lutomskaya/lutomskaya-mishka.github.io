@@ -6,6 +6,10 @@
   padding: 10px;
 }
 
+.site-list__promo {
+  display: none;
+}
+
 .site-list__link {
   @include title (17px, 24px);
   text-decoration: none;
@@ -17,5 +21,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    @include container (668px);
   }
 }

@@ -1,7 +1,7 @@
 .contacts {
   @include container;
   @include text (15px, 30px);
-  color: $color-grey;
+  color: $color-gray;
 }
 
 .contacts__title {

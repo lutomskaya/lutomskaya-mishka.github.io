@@ -1,5 +1,5 @@
 .catalog {
-  @include container;
+  @include container (320px);
 }
 
 .catalog__title {
