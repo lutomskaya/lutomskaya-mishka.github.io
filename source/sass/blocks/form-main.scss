@@ -1,6 +1,7 @@
 .form-main {
   @include center;
   @include container (320px);
+  padding: 0 30px;
 }
 
 .form-main__title {
@@ -16,4 +17,31 @@
   color: $color-gray;
   padding: 30px;
   text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .form-main {
+    @include container (668px);
+    margin-top: -34px;
+  }
+
+  .form-main__title {
+    @include title (43px, 50px);
+  }
+
+  .form-main__text {
+    @include text (17px, 30px);
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-main {
+    @include container (1050px);
+    margin-top: -60px;
+  }
+
+  .form-main__text {
+    padding: 0 175px;
+  }
 }

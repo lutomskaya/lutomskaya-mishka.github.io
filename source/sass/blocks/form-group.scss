@@ -1,41 +1,43 @@
 .form-group {
   @include reset;
+  @include container (320px);
+  padding: 0 30px;
   border: none;
 }
 
 .form-group__title {
   @include reset;
   @include title (17px, 16px);
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  padding-left: 30px;
   text-align: left;
   text-transform: uppercase;
   color: $color-primary;
-}
-
-.form-group__title::after {
-  position: absolute;
-  content: "";
-  top: 27px;
-  left: 0;
-  height: 1px;
-  width: 200px;
-  color: $color-primary;
+  margin-bottom: 30px;
 }
 
 .form-group__item {
   @include title (17px, 18px);
   position: relative;
   display: block;
-  width: 100%;
+  text-align: left;
+  width: 250px;
+  padding: 20px 0 0 70px;
+  margin-bottom: 20px;
+
+  &--text {
+    padding: 0;
+  }
 }
 
-.fform-group__option {
+.form-group__option {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group__field {
+  width: 100%;
+  padding: 20px 0;
 }
 
 .form-group__option input[type="checkbox"],
@@ -43,32 +45,176 @@
   display: none;
 }
 
-.form-group__option input[type="checkbox"] + label::before {
-  position: absolute;
-  content: "";
-  bottom: 10px;
-  left: 0;
-  width: 35px;
-  height: 35px;
-  border: 2px solid #444444;
-}
-
 .form-group__option input[type="radio"] + label::before {
   position: absolute;
   content: "";
-  top: 16px;
+  top: 9px;
   left: 0;
   width: 35px;
   height: 35px;
-  border: 2px solid #444444;
   border-radius: 50%;
+  border: 2px solid $color-gray;
+}
+
+.form-group__option input[type="checkbox"] + label::before {
+  position: absolute;
+  content: "";
+  bottom: -9px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border: 2px solid $color-gray;
+}
+
+
+.form-group__option input[type="radio"] + label:hover::before,
+.form-group__option input[type="checkbox"] + label:hover::before {
+  border-color: $color-primary;
+}
+
+.form-group__option input[type="radio"] + label:active::before,
+.form-group__option input[type="checkbox"] + label:active::before {
+  border-color: $input-active;
+}
+
+.form-group__option input[type="radio"]:checked + label::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $color-primary;
+}
+
+.form-group__option input[type="checkbox"]:checked + label::after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  left: 16px;
+  width: 10px;
+  height: 20px;
+  transform: rotate(45deg);
+  border-bottom: 2px solid $color-black;
+  border-right: 2px solid $color-black;
 }
 
 .form-group__option input[type="text"] {
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid #000000;
-  padding: 13px 0;
+  border-bottom: 2px solid $color-black;
   outline: none;
-  font-size: 17px;
+}
+
+.form-group__option input[type="text"]:hover {
+  border-color: $color-primary;
+}
+
+.form-group__option input[type="text"]:active {
+  border-bottom: 1px solid $color-primary;
+}
+
+.form-group__field[type="tel"],
+.form-group__field[type="email"] {
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid $color-black;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+.form-group__field[type="tel"]:hover,
+.form-group__field[type="email"]:hover {
+  border-color: $color-primary;
+}
+
+.form-group__field[type="tel"]:active,
+.form-group__field[type="email"]:active {
+  border-bottom: 1px solid $color-primary;
+}
+
+.form-group__field--text {
+  border: 2px solid $color-black;
+  box-sizing: border-box;
+  outline: none;
+  padding: 20px;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  &:active {
+    border: 1px solid $color-primary;
+  }
+}
+
+.form-group__fill {
+  @include reset;
+  @include text (14px, 16px);
+  color: $color-gray;
+  text-align: left;
+  padding: 20px 0;
+}
+
+.form-group__btn {
+  width: 260px;
+  background-color: $color-background-lighten;
+  color: $color-gray;
+  border: 2px solid $color-gray;
+  cursor: pointer;
+  margin-bottom: 55px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-group {
+    @include container (668px);
+
+    &--gray {
+      background-color: $color-background-darken;
+    }
+  }
+
+  .form-group__item {
+    @include title (19px, 19px);
+  }
+
+  .form-group__inner {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .form-group__title {
+    width: 167px;
+  }
+
+  .form-group__option {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+  }
+
+  .form-group__add {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .form-group__btn {
+    width: 230px;
+    order: -1;
+    margin: 55px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-group {
+    @include container (1050px);
+    padding-top: 30px;
+    padding-left: 60px;
+  }
+
+  .form-group__add {
+    padding-left: 200px;
+  }
 }
