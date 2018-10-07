@@ -9,3 +9,17 @@
   background-color: $color-background-darken;
   padding: 80px 40px;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    @include container (668px);
+    margin-top: -34px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    @include container (1050px);
+    margin-top: -60px;
+  }
+}

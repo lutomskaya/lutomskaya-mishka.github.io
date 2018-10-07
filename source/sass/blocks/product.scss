@@ -15,10 +15,6 @@
   }
 }
 
-.product__description-header {
-  border-bottom: 1px solid $gray--lighten;
-}
-
 .product__name {
   @include reset;
   @include title (17px, 24px);
@@ -35,10 +31,89 @@
 .product__description-footer {
   display: flex;
   justify-content: space-around;
+  border-top: 1px solid $gray--lighten;
   border-bottom: 1px solid $gray--lighten;
   padding: 20px;
+  margin-bottom: 30px;
 }
 
 .product__price {
   @include title (15px, 24px);
+}
+
+@media (min-width: $tablet-width) {
+  .product {
+    @include container (668px);
+  }
+
+  .product__item {
+    display: flex;
+    margin-top: 85px;
+    width: 100%;
+  }
+
+  .product__image {
+    width: 50%;
+  }
+
+  .product__description {
+    width: 50%;
+    text-align: left;
+  }
+
+  .product__description-header {
+    margin-bottom: 180px;
+    border: none;
+  }
+
+  .product__name {
+    @include title (20px, 24px);
+    padding: 0;
+  }
+
+  .product__text {
+    @include text (15px, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    @include container (1050px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product__item {
+    width: 319px;
+    flex-direction: column;
+  }
+
+  .product__image {
+    width: 100%;
+  }
+
+  .product__description {
+    width: 100%;
+  }
+
+  .product__description-header {
+    margin: 30px;
+
+    &--basket-toys {
+      margin-bottom: 5px;
+    }
+  }
+
+  .product__description-footer {
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    padding-top: 20px;
+    margin: 30px;
+
+    &--basket-toys {
+      margin-top: 0;
+    }
+  }
 }
