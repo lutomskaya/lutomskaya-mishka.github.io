@@ -1,7 +1,7 @@
 .product {
   @include reset;
   @include center;
-  @include container;
+  @include container (320px);
   margin-top: 30px;
 }
 
@@ -28,7 +28,7 @@
 .product__text {
   @include reset;
   @include text (13px, 30px);
-  color: $color-grey;
+  color: $color-gray;
   padding-bottom: 10px;
 }
 

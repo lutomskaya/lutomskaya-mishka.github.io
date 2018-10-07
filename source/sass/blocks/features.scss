@@ -1,5 +1,6 @@
 .features {
-  @include container;
+  @include container (320px);
+  padding: 0 30px;
 }
 
 .features__title {
@@ -8,6 +9,7 @@
 
 .features__list {
   @include reset;
+  padding-top: 30px;
 }
 
 .features__item {
@@ -38,5 +40,45 @@
 
   &--delivery {
     background-image: url("../../img/icon-feature-gift.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    @include container (668px);
+    padding: 0 50px;
+  }
+
+  .features__title {
+    @include title (43px, 50px);
+  }
+
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .features__item {
+    @include title (20px, 22px);
+    width: 50%;
+    padding: 60px 0;
+
+    &--eco,
+    &--manually {
+      order: -2;
+    }
+
+    &--style,
+    &--manufacturer {
+      order: -1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    @include container (700px);
+    padding: 0 100px;
   }
 }

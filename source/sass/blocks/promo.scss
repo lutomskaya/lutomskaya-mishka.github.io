@@ -1,31 +1,124 @@
 .promo {
-  @include container;
+  @include container (320px);
+  position: relative;
+  padding: 35px 30px;
   width: 100%;
   text-align: left;
 }
 
 .promo__title {
-  @include title(25px, 30px);
+  @include reset;
+  @include title (25px, 30px);
 }
 
 .promo__label {
+  @include reset;
   @include title(17px, 20px);
+  padding-top: 10px;
   color: $color-primary;
   text-transform: uppercase;
 }
 
 .promo__text {
+  @include reset;
   @include text(15px, 24px);
-  color: $color-grey;
+  padding-top: 30px;
+  color: $color-gray;
 }
 
 .promo__image {
   @include center;
-  width: 100%;
+  overflow: hidden;
+  padding-top: 30px;
 }
 
 .promo__price {
   @include title(17px, 24px);
   @include center;
-  color: $color-grey;
+  color: $color-gray;
+  padding-top: 30px;
+}
+
+.promo__btn {
+  margin-top: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    @include container (668px);
+    padding: 35px 50px;
+  }
+
+  .promo__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .promo__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .promo__content {
+    width: 50%;
+  }
+
+  .promo__title {
+    @include title(43px, 50px);
+  }
+
+  .promo__label {
+    @include title(17px, 17px);
+    width: 10%;
+    text-align: center;
+  }
+
+  .promo__text {
+    @include text(17px, 30px);
+  }
+
+  .promo__image {
+    margin: 0;
+    padding-top: 30px;
+  }
+
+  .promo__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .promo__price {
+    @include title(20px, 24px);
+    padding: 0 138px;
+  }
+
+  .promo__btn {
+    width: 290px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    @include container (1050px);
+    padding: 50px 100px;
+  }
+
+  .promo__title {
+    @include title(53px, 57px);
+  }
+
+  .promo__label {
+    order: -1;
+  }
+
+  .promo__content {
+    padding-left: 160px;
+  }
+
+  .promo__footer {
+    left: 205px;
+  }
 }

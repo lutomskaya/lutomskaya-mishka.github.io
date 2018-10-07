@@ -1,5 +1,6 @@
 .reviews {
-  @include container;
+  @include container (320px);
+  padding: 0 30px;
 }
 
 .reviews__title {
@@ -10,13 +11,12 @@
 
 .reviews__item {
   @include reset;
-  padding: 0 30px;
 }
 
 .reviews__text {
   @include reset;
   @include text (15px, 30px);
-  color: $color-grey;
+  color: $color-gray;
   padding-bottom: 20px;
 }
 
@@ -50,5 +50,74 @@
 
   &--next {
     background-image: url("../../img/icon-right-arrow.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    @include container (668px);
+    padding: 80px 50px;
+    background-image: url("../../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .reviews__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .reviews__title {
+    @include title (43px, 50px);
+    padding: 0;
+    order: -2;
+  }
+
+  .reviews__footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+  }
+
+  .reviews__btn {
+    width: 175px;
+    order: -1;
+    margin: 0;
+  }
+
+  .reviews__text {
+    @include text (17px, 30px);
+    padding-top: 60px;
+  }
+
+  .reviews__toggles {
+    position: absolute;
+    right: 0;
+    bottom: -37px;
+  }
+
+  .reviews__btn-nav {
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    @include container (1050px);
+    padding: 0;
+  }
+
+  .reviews__title {
+    @include title (53px, 57px);
+  }
+
+  .reviews__inner {
+    padding: 80px 0 60px 175px;
+  }
+
+  .reviews__toggles {
+    bottom: 20px;
   }
 }

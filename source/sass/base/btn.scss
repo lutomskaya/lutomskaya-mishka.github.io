@@ -5,17 +5,17 @@
   display: block;
   padding: 10px;
   text-transform: uppercase;
-  color: $color-grey;
-  border: 2px solid $color-grey;
+  color: $color-gray;
+  border: 2px solid $color-gray;
   cursor: pointer;
 
   &:hover {
     color: $color-background-lighten;
-    background-color: $color-grey;
+    background-color: $color-gray;
   }
 
   &:active {
-    background-color: $color-grey;
+    background-color: $color-gray;
     color: rgba($color-background-lighten, 0.3);
   }
 }

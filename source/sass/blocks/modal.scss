@@ -1,7 +1,8 @@
 .modal {
-  @include container;
+  @include container (320px);
   @include center;
   min-height: 340px;
+  display: none;
 }
 
 .modal__title {
@@ -13,7 +14,7 @@
 
 .modal__label {
   @include text (15px, 30px);
-  color: $color-grey;
+  color: $color-gray;
 }
 
 .modal-form {

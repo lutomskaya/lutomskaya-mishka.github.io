@@ -1,4 +1,32 @@
 .page-footer {
-  @include container;
+  @include container (320px);
   background-color: $color-background-darken;
+  margin-top: 40px;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    @include container (668px);
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    @include container (1050px);
+  }
 }
