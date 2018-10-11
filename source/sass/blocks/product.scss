@@ -6,6 +6,9 @@
 }
 
 .product__item {
+  border: 1px solid $gray--lighten;
+  margin-bottom: 30px;
+
   &:hover {
     box-shadow: 0 4px 10px 0 $gray--lighten;
   }
@@ -32,7 +35,6 @@
   display: flex;
   justify-content: space-around;
   border-top: 1px solid $gray--lighten;
-  border-bottom: 1px solid $gray--lighten;
   padding: 20px;
   margin-bottom: 30px;
 }
@@ -64,6 +66,7 @@
   .product__description-header {
     margin-bottom: 180px;
     border: none;
+    padding-top: 30px;
   }
 
   .product__name {
@@ -84,7 +87,7 @@
   }
 
   .product__item {
-    width: 319px;
+    width: 30%;
     flex-direction: column;
   }
 

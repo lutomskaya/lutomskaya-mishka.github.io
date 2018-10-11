@@ -66,6 +66,7 @@
 
 .reviews__btn {
   margin-bottom: 45px;
+  width: 260px;
 }
 
 @media (min-width: $tablet-width) {
@@ -98,7 +99,7 @@
   }
 
   .reviews__btn {
-    width: 27%;
+    width: 180px;
     order: -1;
     margin: 0;
   }
@@ -116,7 +117,7 @@
 
   .reviews__btn-nav {
     border: none;
-    width: 11%;
+    width: 85px;
     padding: 30px;
   }
 }

@@ -1,10 +1,14 @@
+.production {
+  @include container (320px);
+}
+
 .production__inner {
   @include reset;
   @include center;
-  @include container (320px);
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1px solid $gray--lighten;
+
+  border: 1px solid $gray--lighten;
   margin-bottom: 60px;
 
   &:hover {
@@ -24,6 +28,10 @@
   padding-left: 120px;
 }
 
+.production__video {
+  @include center;
+}
+
 .production__description {
   @include reset;
   @include text (13px, 24px);
@@ -38,7 +46,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .production__inner {
+  .production {
     @include container (668px);
     margin-bottom: 65px;
   }
@@ -73,6 +81,7 @@
   }
 
   .production__inner {
+    @include container (1050px);
     position: relative;
     min-height: 455px;
     padding-left: 700px;

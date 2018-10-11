@@ -1,5 +1,6 @@
 .catalog {
-  @include container (320px);
+  min-width: 320px;
+  width: 100%;
 }
 
 .catalog__title {
@@ -8,12 +9,19 @@
   @include title (27px, 30px);
   background-color: $color-background-darken;
   padding: 80px 40px;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
   .catalog {
-    @include container (668px);
     margin-top: -34px;
+  }
+
+  .catalog__title {
+    background-image: url("../../img/bg-zigzag-line.svg");
+    background-position: 0 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 
