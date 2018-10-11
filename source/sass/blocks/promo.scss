@@ -1,4 +1,5 @@
 .promo {
+  @include center;
   position: relative;
   min-width: 320px;
   width: 100%;
