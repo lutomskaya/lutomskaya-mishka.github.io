@@ -1,6 +1,6 @@
 .table {
   @include text (15px, 20px);
-  @include container (320px);
+  min-width: 320px;
   color: $color-gray;
   border-collapse: collapse;
   width: 100%;

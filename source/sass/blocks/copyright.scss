@@ -9,6 +9,27 @@
   padding-right: 50px;
 }
 
+.copyright__link {
+  width: 35px;
+  height: 35px;
+
+  path {
+    fill: $color-primary;
+  }
+
+  &:hover {
+    path {
+      fill: $color-contacts-field;
+    }
+  }
+
+  &:active {
+    path {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .copyright {
     width: 185px;

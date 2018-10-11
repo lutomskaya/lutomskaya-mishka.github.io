@@ -1,6 +1,6 @@
 .features {
-  @include container (320px);
-  padding: 0 30px;
+  min-width: 320px;
+  width: 100%;
 }
 
 .features__title {
@@ -14,6 +14,7 @@
 
 .features__item {
   @include title (17px, 20px);
+  width: 100%;
   padding: 50px 30px 40px 30px;
   background-repeat: no-repeat;
   background-position: 15% 0;
@@ -46,7 +47,6 @@
 @media (min-width: $tablet-width) {
   .features {
     @include container (668px);
-    padding: 0 50px;
   }
 
   .features__title {
@@ -79,6 +79,5 @@
 @media (min-width: $desktop-width) {
   .features {
     @include container (700px);
-    padding: 0 100px;
   }
 }

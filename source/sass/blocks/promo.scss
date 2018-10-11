@@ -1,9 +1,14 @@
 .promo {
-  @include container (320px);
   position: relative;
-  padding: 35px 30px;
+  min-width: 320px;
   width: 100%;
   text-align: left;
+  box-sizing: border-box;
+  padding-bottom: 55px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-position: 0 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .promo__title {
@@ -46,7 +51,6 @@
 @media (min-width: $tablet-width) {
   .promo {
     @include container (668px);
-    padding: 35px 50px;
   }
 
   .promo__inner {
@@ -59,6 +63,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 65px;
+    width: 100%;
   }
 
   .promo__content {
@@ -67,12 +73,14 @@
 
   .promo__title {
     @include title(43px, 50px);
+    width: 90%;
   }
 
   .promo__label {
     @include title(17px, 17px);
     width: 10%;
     text-align: center;
+    padding-right: 20px;
   }
 
   .promo__text {
@@ -103,7 +111,6 @@
 @media (min-width: $desktop-width) {
   .promo {
     @include container (1050px);
-    padding: 50px 100px;
   }
 
   .promo__title {

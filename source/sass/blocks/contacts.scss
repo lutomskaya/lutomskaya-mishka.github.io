@@ -1,8 +1,8 @@
 .contacts {
-  @include container (320px);
   @include text (15px, 30px);
   color: $color-gray;
-  padding: 0 30px;
+  min-width: 320px;
+  width: 100%;
 }
 
 .contacts__title {
@@ -23,9 +23,28 @@
 }
 
 .contacts__link {
-  @include reset;
+  position: relative;
+  text-decoration: none;
   color: $color-gray;
-  border-bottom: 1px solid $color-primary;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $color-primary;
+  }
+
+
+  &:hover {
+    color: $color-contacts-field;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__text {
@@ -34,13 +53,13 @@
 }
 
 .contacts__map {
+  @include center;
   margin-bottom: 40px;
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
     @include container (668px);
-    padding: 0 50px;
   }
 
   .contacts__title {
@@ -51,13 +70,17 @@
     display: flex;
   }
 
+  .contacts__link::after {
+    top: 28px;
+  }
+
   .contacts__map {
     background-image: url("../../img/map-tablet@1x.jpg");
     margin-bottom: 55px;
   }
 
   .contacts__btn {
-    width: 230px;
+    width: 35%;
     margin-bottom: 60px;
     margin-top: 40px;
   }
@@ -66,7 +89,6 @@
 @media (min-width: $desktop-width) {
   .contacts {
     @include container (1050px);
-    padding: 0 100px;
   }
 
   .contacts__inner {
@@ -102,5 +124,6 @@
     position: absolute;
     bottom: 0;
     left: 160px;
+    width: 22%;
   }
 }

@@ -1,13 +1,17 @@
 .categories {
+  background-color: $color-background-categories;
+}
+
+.categories__inner {
   @include center;
-  @include container (320px);
-  padding: 0 30px;
+  min-width: 320px;
   width: 100%;
   min-height: 285px;
-  overflow: hidden;
   background-image: url("../../img/hero-mobile@1x.jpg");
   background-position: 50% 0;
   background-repeat: no-repeat;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .categories__title {
@@ -18,34 +22,66 @@
 
 .categories__list {
   @include reset;
+  margin-top: 190px;
 }
 
 .categories__link {
   @include title (19px, 24px);
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   text-decoration: none;
   color: $color-background-lighten;
+
+  &:active {
+    color: rgba($color-background-lighten, 0.3);
+
+    path {
+      fill: rgba($color-categories-icon, 0.3);
+    }
+  }
 }
 
 .categories__item {
   text-align: left;
-  width: 100%;
   padding: 30px 30px;
+  cursor: pointer;
+
+  path {
+    fill: rgba($color-categories-icon, 0.5);
+  }
 }
 
 .categories__item--subjects {
-  background-color: #63d1bb;
-  margin-top: 160px;
+  background-color: $color-primary;
 }
 
 .categories__item--toys {
-  background-color: #56c3b2;
+  background-color: $color-primary-darken;
+  padding-right: 21px;
+}
+
+.categories__icon--subjects {
+  width: 40px;
+  height: 62px;
+}
+
+.categories__icon--toys {
+  width: 60px;
+  height: 60px;
 }
 
 @media (min-width: $tablet-width) {
   .categories {
+    padding-bottom: 20px;
+    background-image: url("../../img/bg-zigzag-fill.svg");
+    background-position: 0 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .categories__inner {
     @include container (668px);
-    padding: 0 50px;
     margin-top: -34px;
     min-height: 630px;
     background-image: url("../../img/hero-tablet@1x.jpg");
@@ -61,10 +97,11 @@
   .categories__list {
     display: flex;
     width: 100%;
+    margin-top: 365px;
   }
 
   .categories__item {
-    margin-top: 365px;
+    width: 50%;
   }
 
   .categories__link {
@@ -73,9 +110,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  .categories {
+  .categories__inner {
     @include container (1050px);
-    padding: 0 100px;
     margin-top: -59px;
     min-height: 630px;
     background-image: url("../../img/hero-desktop@1x.jpg");
@@ -88,8 +124,7 @@
     padding: 165px  220px 0 220px;
   }
 
-  .categories__item {
+  .categories__list {
     margin-top: 348px;
-    width: 50%;
   }
 }

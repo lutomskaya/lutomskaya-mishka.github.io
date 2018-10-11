@@ -15,6 +15,18 @@
 
   .page-footer__logo {
     display: block;
+
+    &:hover {
+      path {
+        fill: $color-contacts-field;
+      }
+    }
+
+    &:active {
+      path {
+        fill-opacity: 0.3;
+      }
+    }
   }
 
   .page-footer__inner {

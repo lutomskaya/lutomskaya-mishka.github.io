@@ -1,6 +1,11 @@
 .reviews {
-  @include container (320px);
-  padding: 0 30px;
+  min-width: 320px;
+  width: 100%;
+  padding-bottom: 35px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-position: 0 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .reviews__title {
@@ -36,26 +41,37 @@
 
 .reviews__btn-nav {
   @include reset;
+  @include center;
   display: block;
-  padding: 20px 79px;
+  width: 50%;
+  padding: 10px 0;
   border: 1px solid $gray--lighten;
   background-color: inherit;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   cursor: pointer;
 
-  &--back {
-    background-image: url("../../img/icon-left-arrow.svg");
+  &:hover {
+    polygon {
+      fill: rgba($color-black, 0.6);
+    }
   }
 
-  &--next {
-    background-image: url("../../img/icon-right-arrow.svg");
+  &:active {
+    polygon {
+      fill: rgba($color-black, 0.3);
+    }
   }
+}
+
+.reviews__btn {
+  margin-bottom: 45px;
 }
 
 @media (min-width: $tablet-width) {
   .reviews {
     @include container (668px);
+    width: 100%;
     padding: 80px 50px;
     background-image: url("../../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -82,7 +98,7 @@
   }
 
   .reviews__btn {
-    width: 175px;
+    width: 27%;
     order: -1;
     margin: 0;
   }
@@ -100,6 +116,8 @@
 
   .reviews__btn-nav {
     border: none;
+    width: 11%;
+    padding: 30px;
   }
 }
 
