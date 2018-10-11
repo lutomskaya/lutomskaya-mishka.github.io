@@ -109,7 +109,7 @@
           </div>
           <div class="promo__footer">
             <p class="promo__price">Цена: 990 руб.</p>
-            <a href="#" class="promo__btn btn">Заказать</a>
+            <a href="#" class="promo__btn btn promo__btn--link">Заказать</a>
           </div>
         </div>
       </article>
@@ -248,6 +248,7 @@
         </form>
       </div>
     </div>
+    <div class="modal-overlay"></div>
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
@@ -263,6 +264,29 @@
           navMain.classList.remove('main-nav--opened');
         }
       });
+    </script>
+    <script>
+      var link = document.querySelector('.promo__btn--link');
+      var modal = document.querySelector('.modal');
+      var overlay = document.querySelector(".modal-overlay");
+
+      link.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        modal.classList.add("modal-show");
+        overlay.classList.add("modal-show");
+      });
+
+      window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+        if (modal.classList.contains("modal-show")) {
+          modal.classList.remove("modal-show");
+          overlay.classList.remove("modal-show");
+
+    }
+  }
+});
+
     </script>
   </body>
 </html>

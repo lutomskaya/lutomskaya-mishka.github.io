@@ -50,11 +50,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .promo {
-    @include container (668px);
-  }
-
   .promo__inner {
+    @include container (668px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -96,7 +93,7 @@
   .promo__footer {
     position: absolute;
     bottom: 55px;
-    left: 0;
+    left: 200px;
   }
 
   .promo__price {
@@ -110,7 +107,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .promo {
+  .promo__inner {
     @include container (1050px);
   }
 
