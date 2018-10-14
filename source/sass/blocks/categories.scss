@@ -1,46 +1,136 @@
 .categories {
+  background-color: $color-background-categories;
+  position: relative;
+}
+
+.categories__inner {
   @include center;
-  @include container;
+  min-width: 320px;
   width: 100%;
   min-height: 285px;
+  box-sizing: border-box;
   background-image: url("../../img/hero-mobile@1x.jpg");
-  background-position: 50% 20%;
+  background-position: 50% 0;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .categories__title {
+  @include reset;
   @include title (27px, 30px);
+  padding: 80px 20px 0 20px;
 }
 
 .categories__list {
   @include reset;
+  margin-top: 190px;
 }
 
 .categories__link {
   @include title (19px, 24px);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   text-decoration: none;
   color: $color-background-lighten;
+  padding: 30px;
+
+  &:active {
+    color: rgba($color-background-lighten, 0.3);
+
+    path {
+      fill: rgba($color-categories-icon, 0.3);
+    }
+  }
 }
 
 .categories__item {
   text-align: left;
-  padding: 30px 30px;
 
-  &:first-child {
-    margin-top: 295px;
+  path {
+    fill: rgba($color-categories-icon, 0.5);
   }
 }
 
 .categories__item--subjects {
-  background-color: #63d1bb;
-  background-image: url("../../img/icon-interior.svg");
-  background-position: 90% 50%;
-  background-repeat: no-repeat;
+  background-color: $color-primary;
 }
 
 .categories__item--toys {
-  background-color: #56c3b2;
-  background-image: url("../../img/icon-toy.svg");
-  background-position: 95% 50%;
-  background-repeat: no-repeat;
+  background-color: $color-primary-darken;
+  padding-right: 21px;
+}
+
+.categories__icon--subjects {
+  width: 40px;
+  height: 62px;
+}
+
+.categories__icon--toys {
+  width: 60px;
+  height: 60px;
+}
+
+@media (min-width: $tablet-width) {
+  .categories::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url("../../img/bg-zigzag-fill.svg");
+    background-position: left bottom;
+    background-size: 768px 24px;
+    background-repeat: repeat-x;
+  }
+
+  .categories__inner {
+    padding: 0 50px;
+    margin-top: -34px;
+    min-height: 630px;
+    background-image: url("../../img/hero-tablet@1x.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+
+  .categories__title {
+    @include title (43px, 50px);
+    padding: 165px  67px 0 67px;
+  }
+
+  .categories__list {
+    display: flex;
+    width: 100%;
+    margin-top: 365px;
+  }
+
+  .categories__item {
+    width: 50%;
+  }
+
+  .categories__link {
+    @include title (20px, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories__inner {
+    margin-top: -59px;
+    min-height: 630px;
+    background-image: url("../../img/hero-desktop@1x.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    padding: 0;
+    max-width: 1050px;
+  }
+
+  .categories__title {
+    @include title (53px, 57px);
+    padding: 165px  220px 0 220px;
+  }
+
+  .categories__list {
+    margin-top: 348px;
+  }
 }

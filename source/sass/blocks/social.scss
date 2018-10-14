@@ -1,9 +1,31 @@
 .social__list {
   @include reset;
-  @include center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   padding: 20px 40px;
   border-bottom: 1px solid $gray--lighten;
+}
+
+.social__link {
+  &:hover {
+    path {
+      fill: $color-contacts-field;
+    }
+  }
+
+  &:active {
+    path {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__list {
+    width: 150px;
+    margin: auto;
+    border: none;
+  }
 }

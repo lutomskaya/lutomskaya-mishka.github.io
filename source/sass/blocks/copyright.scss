@@ -1,9 +1,42 @@
 .copyright {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 .copyright__text {
   @include title (19px, 18px);
   padding-right: 50px;
+}
+
+.copyright__link {
+  width: 35px;
+  height: 35px;
+
+  path {
+    fill: $color-primary;
+  }
+
+  &:hover {
+    path {
+      fill: $color-contacts-field;
+    }
+  }
+
+  &:active {
+    path {
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: 185px;
+    padding: 0;
+  }
+
+  .copyright__text {
+    padding-right: 20px;
+  }
 }

@@ -1,14 +1,22 @@
 .table {
   @include text (15px, 20px);
-  color: $color-grey;
+  color: $color-gray;
   border-collapse: collapse;
   width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.table tr {
+.table__row {
   border-bottom: 1px solid $gray--lighten;
 }
 
 .table__field {
-  padding: 10px 30px;
+  padding: 10px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .table {
+    margin: 50px 0 165px 0;
+  }
 }

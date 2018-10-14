@@ -1,5 +1,9 @@
 .features {
-  @include container;
+  @include center;
+  min-width: 320px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .features__title {
@@ -8,13 +12,16 @@
 
 .features__list {
   @include reset;
+  padding-top: 30px;
 }
 
 .features__item {
   @include title (17px, 20px);
-  padding: 50px 30px 40px 30px;
+  width: 100%;
+  padding: 50px 0 40px 0;
   background-repeat: no-repeat;
-  background-position: 15% 0;
+  background-position: 0 0;
+  box-sizing: border-box;
 
   &--eco {
     background-image: url("../../img/icon-feature-flower.svg");
@@ -38,5 +45,49 @@
 
   &--delivery {
     background-image: url("../../img/icon-feature-gift.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding: 0 50px;
+  }
+
+  .features__title {
+    @include title (43px, 50px);
+    text-align: left;
+  }
+
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .features__item {
+    @include title (20px, 22px);
+    width: 50%;
+    padding: 60px 0;
+
+    &--eco,
+    &--manually {
+      order: -2;
+    }
+
+    &--style,
+    &--manufacturer {
+      order: -1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding: 0;
+    max-width: 1050px;
+  }
+
+  .features__inner {
+    @include container (700px);
   }
 }

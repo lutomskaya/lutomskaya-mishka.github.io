@@ -1,10 +1,20 @@
 $font: "Open Sans", "Arial", sans-serif;
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-width-only: 767px;
 
 $color-background-lighten: #ffffff;
 $color-background-darken: #f1f1f1;
+$color-background-middle: #fafafa;
+$color-background-categories: #f9f9f9;
 
-$color-grey: #444444;
+$color-gray: #444444;
 $gray--lighten: #ececec;
 $color-black: #000000;
+$input-active: #c7c7c7;
 
 $color-primary: #63d1bb;
+$color-primary-darken: #56c3b2;
+
+$color-categories-icon: #149080;
+$color-contacts-field: #46c1ae;
