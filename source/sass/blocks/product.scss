@@ -1,7 +1,10 @@
 .product {
   @include reset;
   @include center;
-  @include container (320px);
+  min-width: 320px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
   margin-top: 30px;
 }
 
@@ -45,7 +48,7 @@
 
 @media (min-width: $tablet-width) {
   .product {
-    @include container (668px);
+    padding: 0 50px;
   }
 
   .product__item {
@@ -81,7 +84,8 @@
 
 @media (min-width: $desktop-width) {
   .product {
-    @include container (1050px);
+    padding: 0;
+    max-width: 1050px;
     display: flex;
     justify-content: space-between;
   }

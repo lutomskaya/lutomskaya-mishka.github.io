@@ -1,9 +1,10 @@
 .table {
   @include text (15px, 20px);
-  min-width: 320px;
   color: $color-gray;
   border-collapse: collapse;
   width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .table__row {
@@ -16,8 +17,6 @@
 
 @media (min-width: $tablet-width) {
   .table {
-    margin: 0;
-    margin-top: 50px;
-    margin-bottom: 165px;
+    margin: 50px 0 165px 0;
   }
 }

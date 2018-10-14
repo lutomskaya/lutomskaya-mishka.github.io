@@ -1,8 +1,10 @@
 .main-nav {
+  @include center;
   position: relative;
   min-width: 320px;
   width: 100%;
-  background-color: $color-background-lighten;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .main-nav__toggle {
@@ -17,6 +19,7 @@
 
   cursor: pointer;
   border: none;
+  outline: none;
 }
 
 .main-nav--closed .main-nav__toggle::before {
@@ -71,7 +74,18 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-nav {
+    padding: 0 50px;
+  }
+
   .main-nav__toggle {
     display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    padding: 0;
+    max-width: 1050px;
   }
 }

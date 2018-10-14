@@ -1,6 +1,10 @@
 .page-footer {
-  @include container (320px);
   background-color: $color-background-darken;
+  width: 100%;
+}
+
+.page-footer__inner {
+  @include container (320px);
   margin-top: 40px;
 }
 
@@ -9,8 +13,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-footer {
+  .page-footer__inner {
     @include container (668px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
   }
 
   .page-footer__logo {
@@ -28,17 +36,10 @@
       }
     }
   }
-
-  .page-footer__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-  }
 }
 
 @media (min-width: $desktop-width) {
-  .page-footer {
+  .page-footer__inner {
     @include container (1050px);
   }
 }

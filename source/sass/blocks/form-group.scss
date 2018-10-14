@@ -1,17 +1,34 @@
 .form-group {
   @include reset;
-  @include container (320px);
-  padding: 0 30px;
   border: none;
+}
+
+.form-group__inner {
+  padding: 0 20px;
+}
+
+.form-group__wrapper {
+  width: 100%;
 }
 
 .form-group__title {
   @include reset;
   @include title (17px, 16px);
+  position: relative;
   text-align: left;
   text-transform: uppercase;
   color: $color-primary;
   margin-bottom: 30px;
+}
+
+.form-group__title::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 75%;
+  height: 1px;
+  background-color: $color-primary;
 }
 
 .form-group__item {
@@ -19,7 +36,7 @@
   position: relative;
   display: block;
   text-align: left;
-  width: 250px;
+  width: 100%;
   padding: 20px 0 0 70px;
   margin-bottom: 20px;
 
@@ -36,8 +53,14 @@
 }
 
 .form-group__field {
+  @include text (17px, 18px);
   width: 100%;
   padding: 20px 0;
+  color: $color-gray;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
 }
 
 .form-group__option input[type="checkbox"],
@@ -154,11 +177,16 @@
   @include text (14px, 16px);
   color: $color-gray;
   text-align: left;
-  padding: 20px 0;
+  padding: 20px 20px;
+}
+
+.form-group__add {
+  @include text (14px, 16px);
+  color: $color-gray;
 }
 
 .form-group__btn {
-  width: 260px;
+  width: 280px;
   background-color: $color-background-lighten;
   color: $color-gray;
   border: 2px solid $color-gray;
@@ -167,37 +195,48 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form-group {
-    @include container (668px);
-
-    &--gray {
-      background-color: $color-background-darken;
-    }
-  }
-
-  .form-group__item {
-    @include title (19px, 19px);
-  }
-
   .form-group__inner {
+    padding: 0 50px;
     display: flex;
     align-items: baseline;
   }
 
+  .form-group--gray {
+    width: 100%;
+    background-color: $color-background-darken;
+  }
+
+  .form-group__item {
+    @include title (19px, 19px);
+
+    &--gray {
+      width: 36%;
+    }
+  }
+
   .form-group__title {
-    width: 167px;
+    width: 25%;
+
+    &::after {
+      display: none;
+    }
   }
 
   .form-group__option {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    width: 75%;
+  }
+
+  .form-group__field--gray {
+    background-color: $color-background-darken;
   }
 
   .form-group__add {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    padding: 0 50px;
   }
 
   .form-group__btn {
@@ -209,7 +248,8 @@
 
 @media (min-width: $desktop-width) {
   .form-group {
-    @include container (1050px);
+    padding: 0;
+    max-width: 1050px;
     padding-top: 30px;
     padding-left: 60px;
   }

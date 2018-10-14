@@ -1,5 +1,6 @@
 .categories {
   background-color: $color-background-categories;
+  position: relative;
 }
 
 .categories__inner {
@@ -7,17 +8,17 @@
   min-width: 320px;
   width: 100%;
   min-height: 285px;
+  box-sizing: border-box;
   background-image: url("../../img/hero-mobile@1x.jpg");
   background-position: 50% 0;
   background-repeat: no-repeat;
-  box-sizing: border-box;
   overflow: hidden;
 }
 
 .categories__title {
   @include reset;
   @include title (27px, 30px);
-  padding-top: 80px;
+  padding: 80px 20px 0 20px;
 }
 
 .categories__list {
@@ -32,6 +33,7 @@
   align-items: baseline;
   text-decoration: none;
   color: $color-background-lighten;
+  padding: 30px;
 
   &:active {
     color: rgba($color-background-lighten, 0.3);
@@ -44,8 +46,6 @@
 
 .categories__item {
   text-align: left;
-  padding: 30px 30px;
-  cursor: pointer;
 
   path {
     fill: rgba($color-categories-icon, 0.5);
@@ -72,16 +72,21 @@
 }
 
 @media (min-width: $tablet-width) {
-  .categories {
-    padding-bottom: 20px;
+  .categories::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 24px;
     background-image: url("../../img/bg-zigzag-fill.svg");
-    background-position: 0 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 768px 24px;
+    background-repeat: repeat-x;
   }
 
   .categories__inner {
-    @include container (668px);
+    padding: 0 50px;
     margin-top: -34px;
     min-height: 630px;
     background-image: url("../../img/hero-tablet@1x.jpg");
@@ -111,12 +116,13 @@
 
 @media (min-width: $desktop-width) {
   .categories__inner {
-    @include container (1050px);
     margin-top: -59px;
     min-height: 630px;
     background-image: url("../../img/hero-desktop@1x.jpg");
     background-position: 50% 0;
     background-repeat: no-repeat;
+    padding: 0;
+    max-width: 1050px;
   }
 
   .categories__title {

@@ -1,10 +1,12 @@
 .production {
-  @include container (320px);
+  @include center;
+  min-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .production__inner {
   @include reset;
-  @include center;
   display: flex;
   flex-wrap: wrap;
 
@@ -47,7 +49,7 @@
 
 @media (min-width: $tablet-width) {
   .production {
-    @include container (668px);
+    padding: 0 50px;
     margin-bottom: 65px;
   }
 
@@ -77,11 +79,11 @@
 
 @media (min-width: $desktop-width) {
   .production {
-    @include container (1050px);
+    padding: 0;
+    max-width: 1050px;
   }
 
   .production__inner {
-    @include container (1050px);
     position: relative;
     min-height: 455px;
     padding-left: 700px;

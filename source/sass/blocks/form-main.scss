@@ -1,14 +1,24 @@
 .form-main {
   @include center;
-  @include container (320px);
-  padding: 0 30px;
+  min-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-main__inner {
+  @include center;
+}
+
+.form-main__intro {
+  min-height: 250px;
+  position: relative;
+  background-color: $color-background-darken;
 }
 
 .form-main__title {
   @include reset;
   @include title (27px, 30px);
-  background-color: $color-background-darken;
-  padding: 80px 40px;
+  padding-top: 100px;
 }
 
 .form-main__text {
@@ -20,27 +30,31 @@
 }
 
 @media (min-width: $tablet-width) {
-  .form-main {
-    @include container (668px);
-    margin-top: -34px;
-  }
-
   .form-main__title {
     @include title (43px, 50px);
+  }
+
+  .form-main__intro::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 11px;
+    background-image: url("../../img/bg-zigzag-line.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-x;
   }
 
   .form-main__text {
     @include text (17px, 30px);
     margin-top: 80px;
+    padding: 30px 50px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .form-main {
-    @include container (1050px);
-    margin-top: -60px;
-  }
-
   .form-main__text {
     padding: 0 175px;
   }

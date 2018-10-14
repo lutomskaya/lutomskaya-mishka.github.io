@@ -3,6 +3,7 @@
   color: $color-gray;
   min-width: 320px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .contacts__title {
@@ -57,13 +58,14 @@
   margin-bottom: 40px;
 }
 
-@media (min-width: $tablet-width) {
-  .contacts {
-    @include container (668px);
-  }
+.contacts__btn {
+  width: 240px;
+}
 
+@media (min-width: $tablet-width) {
   .contacts__title {
     @include title (43px, 50px);
+    padding-right: 50px;
   }
 
   .contacts__wrapper {
