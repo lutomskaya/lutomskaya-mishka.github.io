@@ -6,7 +6,8 @@
   padding: 0 20px;
   text-align: left;
   box-sizing: border-box;
-  padding-bottom: 55px;
+  padding-bottom: 46px;
+  margin-bottom: 25px;
 }
 
 .promo::after {
@@ -22,6 +23,14 @@
   background-repeat: repeat-x;
 }
 
+.promo__header {
+  padding-left: 11px;
+}
+
+.promo__content {
+  padding-left: 11px;
+}
+
 .promo__title {
   @include reset;
   @include title (25px, 30px);
@@ -30,7 +39,7 @@
 .promo__label {
   @include reset;
   @include title(17px, 20px);
-  padding-top: 10px;
+  padding-top: 5px;
   color: $color-primary;
   text-transform: uppercase;
 }
@@ -38,7 +47,7 @@
 .promo__text {
   @include reset;
   @include text(15px, 24px);
-  padding-top: 30px;
+  padding: 23px 10px 16px 0;
   color: $color-gray;
 }
 
@@ -52,12 +61,13 @@
   @include title(17px, 24px);
   @include center;
   color: $color-gray;
-  padding-top: 30px;
+  padding-top: 17px;
 }
 
 .promo__btn {
-  margin-top: 30px;
-  width: 260px;
+  padding: 14px 10px;
+  margin-top: 25px;
+  width: 236px;
 }
 
 @media (min-width: $tablet-width) {

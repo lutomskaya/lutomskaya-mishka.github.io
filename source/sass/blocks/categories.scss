@@ -1,6 +1,7 @@
 .categories {
   background-color: $color-background-categories;
   position: relative;
+  margin-bottom: 28px;
 }
 
 .categories__inner {
@@ -9,22 +10,26 @@
   width: 100%;
   min-height: 285px;
   box-sizing: border-box;
-  background-image: url("../img/hero-mobile@1x.jpg");
+  background-image: url("../../img/hero-mobile@1x.jpg");
   background-position: 50% 0;
   background-repeat: no-repeat;
   overflow: hidden;
   border-top: 1px solid $gray--lighten;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 }
 
 .categories__title {
   @include reset;
   @include title (27px, 30px);
-  padding: 80px 20px 0 20px;
+  padding: 73px 10px 0 10px;
 }
 
 .categories__list {
   @include reset;
-  margin-top: 190px;
+  margin-top: 122px;
 }
 
 .categories__link {
@@ -34,7 +39,13 @@
   align-items: center;
   text-decoration: none;
   color: $color-background-lighten;
-  padding: 30px;
+  padding: 21px 30px;
+  text-align: left;
+  transition: all 0.2s linear;
+
+  path {
+    fill: rgba($color-categories-icon, 0.5);
+  }
 
   &:hover {
     transform: translateY(-5px);
@@ -53,28 +64,16 @@
   }
 }
 
-.categories__text {
-  max-width: 130px;
-}
-
-.categories__item {
-  text-align: left;
-
-  path {
-    fill: rgba($color-categories-icon, 0.5);
-  }
-
-  &:hover {
-    transform: scaleY(1.05);
-  }
-}
-
-.categories__item--subjects {
+.categories__link--subjects {
   background-color: $color-primary;
 }
 
-.categories__item--toys {
+.categories__link--toys {
   background-color: $color-primary-darken;
+}
+
+.categories__text {
+  max-width: 130px;
 }
 
 .categories__icon--subjects {
@@ -108,6 +107,10 @@
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: 50% 0;
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
   }
 
   .categories__title {
@@ -138,6 +141,10 @@
     background-position: 50% 0;
     background-repeat: no-repeat;
     max-width: 1150px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 
   .categories__title {

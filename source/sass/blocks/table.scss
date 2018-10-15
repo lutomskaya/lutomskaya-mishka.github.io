@@ -15,6 +15,10 @@
   padding: 10px 0;
 }
 
+.table__value {
+  padding-left: 12px;
+}
+
 @media (min-width: $tablet-width) {
   .table {
     margin: 50px 0 165px 0;

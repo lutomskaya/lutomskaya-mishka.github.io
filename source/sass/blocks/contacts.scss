@@ -10,16 +10,16 @@
   @include title (18px, 30px);
   @include reset;
   color: $color-black;
-  padding: 40px 30px;
+  padding-left: 30px;
 }
 
 .contacts__item {
-  padding: 0 30px;
+  padding: 25px 0 4px 30px;
   display: flex;
 }
 
 .contacts__field {
-  padding-right: 35px;
+  padding-right: 17px;
   min-width: 60px;
 }
 
@@ -31,7 +31,7 @@
   &::after {
     position: absolute;
     content: "";
-    bottom: 3px;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 1px;
@@ -55,11 +55,13 @@
 
 .contacts__map {
   @include center;
-  margin-bottom: 40px;
+  margin-bottom: 29px;
+  padding-top: 35px;
 }
 
 .contacts__btn {
   width: 240px;
+  padding: 14px 9px;
 }
 
 @media (min-width: $tablet-width) {
