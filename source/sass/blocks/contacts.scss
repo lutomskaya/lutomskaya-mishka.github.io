@@ -77,7 +77,7 @@
   }
 
   .contacts__map {
-    background-image: url("../../img/map-tablet@1x.jpg");
+    background-image: url("../img/map-tablet@1x.jpg");
     margin-bottom: 55px;
   }
 
@@ -89,15 +89,14 @@
 }
 
 @media (min-width: $desktop-width) {
-  .contacts {
-    @include container (1050px);
-  }
-
   .contacts__inner {
+    @include container (1150px);
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     position: relative;
+    padding: 0 50px;
+    box-sizing: border-box;
   }
 
   .contacts__title {
@@ -118,7 +117,7 @@
 
   .contacts__map {
     width: 50%;
-    background-image: url("../../img/map-desktop@1x.jpg");
+    background-image: url("../img/map-desktop@1x.jpg");
     margin-top: -70px;
   }
 

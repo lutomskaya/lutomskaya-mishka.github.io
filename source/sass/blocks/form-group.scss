@@ -1,10 +1,13 @@
 .form-group {
   @include reset;
   border: none;
+  box-sizing: border-box;
 }
 
 .form-group__inner {
   padding: 0 20px;
+  margin: auto;
+  max-width: 1150px;
 }
 
 .form-group__wrapper {
@@ -183,6 +186,8 @@
 .form-group__add {
   @include text (14px, 16px);
   color: $color-gray;
+  max-width: 1150px;
+  margin: auto;
 }
 
 .form-group__btn {
@@ -249,7 +254,6 @@
 @media (min-width: $desktop-width) {
   .form-group {
     padding: 0;
-    max-width: 1050px;
     padding-top: 30px;
     padding-left: 60px;
   }
