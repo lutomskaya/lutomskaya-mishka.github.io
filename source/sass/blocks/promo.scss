@@ -135,6 +135,21 @@
     max-width: 1150px;
   }
 
+  .promo__inner {
+    position: relative;
+    min-height: 720px;
+  }
+
+  .promo__header {
+    position: relative;
+    z-index: 1;
+  }
+
+  .promo__image {
+    position: absolute;
+    right: 0;
+  }
+
   .promo__title {
     @include title(53px, 57px);
   }
@@ -145,6 +160,7 @@
 
   .promo__content {
     padding-left: 125px;
+    width: 60%;
   }
 
   .promo__footer {

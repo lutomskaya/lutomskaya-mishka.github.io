@@ -34,6 +34,11 @@
   @include center;
 }
 
+.production__video img {
+  width: 100%;
+  height: auto;
+}
+
 .production__description {
   @include reset;
   @include text (13px, 24px);

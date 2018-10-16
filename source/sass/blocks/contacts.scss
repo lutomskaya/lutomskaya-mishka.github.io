@@ -59,6 +59,11 @@
   padding-top: 35px;
 }
 
+.contacts__map img {
+  width: 100%;
+  height: auto;
+}
+
 .contacts__btn {
   width: 240px;
   padding: 14px 9px;
@@ -76,11 +81,6 @@
 
   .contacts__link::after {
     top: 28px;
-  }
-
-  .contacts__map {
-    background-image: url("../img/map-tablet@1x.jpg");
-    margin-bottom: 55px;
   }
 
   .contacts__btn {
@@ -115,12 +115,6 @@
   .contacts__wrapper {
     width: 50%;
     flex-direction: column;
-  }
-
-  .contacts__map {
-    width: 50%;
-    background-image: url("../img/map-desktop@1x.jpg");
-    margin-top: -70px;
   }
 
   .contacts__btn {
