@@ -5,6 +5,7 @@
   width: 100%;
   box-sizing: border-box;
   padding-bottom: 35px;
+  margin-bottom: 31px;
 }
 
 .reviews::after {
@@ -21,17 +22,18 @@
 }
 
 .reviews__inner {
-  padding: 0 20px;
+  text-align: left;
+  padding: 0 30px;
 }
 
 .reviews__title {
   @include title (25px, 30px);
   @include reset;
-  padding: 40px 30px;
 }
 
 .reviews__item {
   @include reset;
+  padding-top: 23px;
 }
 
 .reviews__text {
@@ -39,10 +41,11 @@
   @include text (15px, 30px);
   text-align: left;
   color: $color-gray;
-  padding-bottom: 20px;
+  padding-bottom: 28px;
 }
 
 .reviews__author-name {
+  @include reset;
   @include title (17px, 24px);
 }
 
@@ -52,8 +55,8 @@
 
 .reviews__toggles {
   display: flex;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 33px;
+  margin-bottom: 39px;
 }
 
 .reviews__btn-nav {
@@ -82,8 +85,9 @@
 }
 
 .reviews__btn {
-  margin-bottom: 45px;
-  width: 240px;
+  padding: 12px 10px;
+  margin-bottom: 23px;
+  width: 238px;
 }
 
 @media (min-width: $tablet-width) {
@@ -91,6 +95,10 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-size: auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__inner {

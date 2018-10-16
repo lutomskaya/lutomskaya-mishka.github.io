@@ -21,6 +21,11 @@
   }
 }
 
+.product__image img {
+  width: 100%;
+  height: auto;
+}
+
 .product__name {
   @include reset;
   @include title (17px, 24px);
