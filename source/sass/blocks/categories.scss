@@ -43,25 +43,18 @@
   padding: 21px 30px;
   text-align: left;
   transition: all 0.2s linear;
-
-  path {
-    fill: rgba($color-categories-icon, 0.5);
-  }
+  fill: rgba($color-categories-icon, 0.5);
 
   &:hover {
     transform: translateY(-5px);
 
-    path {
-      fill: rgba($color-categories-icon, 0.7);
-    }
+    fill: rgba($color-categories-icon, 0.7);
   }
 
   &:active {
     color: rgba($color-background-lighten, 0.3);
 
-    path {
-      fill: rgba($color-categories-icon, 0.3);
-    }
+    fill: rgba($color-categories-icon, 0.3);
   }
 }
 

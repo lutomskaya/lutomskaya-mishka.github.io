@@ -9,16 +9,14 @@
 }
 
 .social__link {
+  fill: $color-black;
+
   &:hover {
-    path {
-      fill: $color-contacts-field;
-    }
+    fill: $color-contacts-field;
   }
 
   &:active {
-    path {
-      fill-opacity: 0.3;
-    }
+    fill-opacity: 0.3;
   }
 }
 

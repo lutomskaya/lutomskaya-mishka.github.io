@@ -5,7 +5,6 @@
 }
 
 .site-list__item {
-  padding: 12px;
   border-bottom: 1px solid $gray--lighten;
 
   &--search {
@@ -22,37 +21,39 @@
 }
 
 .site-list__icon {
-  path {
-    fill: rgba($color-black, 0.3);
-  }
+  position: absolute;
+  top: 31px;
+  left: 30px;
+  fill: rgba($color-black, 0.3);
 }
 
 .site-list__link {
   @include title (17px, 24px);
   position: relative;
   display: block;
+  text-align: left;
   text-decoration: none;
   color: $color-black;
-
-  &--search {
-    margin: auto;
-  }
-
-  &--basket {
-    margin: auto;
-  }
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 76px;
 
   &:hover {
     color: rgba($color-black, 0.3);
-
-    path {
-      fill: $color-primary;
-    }
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.site-list__link:hover .site-list__icon, {
+  fill: $color-primary;
+}
+
+.site-list__link--logo {
+  text-align: center;
+  padding-left: 0;
 }
 
 .site-list__intro {
@@ -72,14 +73,12 @@
     &--catalog {
       order: 1;
       width: 25%;
-      text-align: left;
       border-bottom: none;
     }
 
     &--knitting {
       order: 1;
       width: 25%;
-      text-align: left;
       border-bottom: none;
     }
 
@@ -93,21 +92,29 @@
     &--basket {
       @include title (17px, 24px);
       flex-grow: 1;
-      text-align: right;
     }
   }
 
   .site-list__link {
     @include title (15px, 24px);
+    padding: 10px 0;
+    text-align: left;
 
     &--search {
       font-size: 0;
     }
+
+    &--basket {
+      text-align: right;
+    }
   }
 
   .site-list__logo {
-    text-align: left;
     width: 48%;
+  }
+
+  .site-list__link--logo {
+    text-align: left;
   }
 
   .site-list__intro {
@@ -125,7 +132,6 @@
 
 @media (min-width: $desktop-width) {
   .site-list__item {
-    padding: 30px 0 15px;
     border-bottom: none;
 
 
@@ -155,8 +161,11 @@
   }
 
   .site-list__logo {
-    text-align: center;
     width: 26%;
+  }
+
+  .site-list__link--logo {
+    text-align: center;
   }
 
   .site-list-item__promo {

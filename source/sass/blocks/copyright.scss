@@ -12,21 +12,14 @@
 .copyright__link {
   width: 35px;
   height: 35px;
-
-  path {
-    fill: $color-primary;
-  }
+  fill: $color-primary;
 
   &:hover {
-    path {
-      fill: $color-contacts-field;
-    }
+    fill: $color-contacts-field;
   }
 
   &:active {
-    path {
-      fill-opacity: 0.3;
-    }
+    fill-opacity: 0.3;
   }
 }
 

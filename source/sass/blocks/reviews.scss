@@ -69,18 +69,15 @@
   background-color: inherit;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  outline: none;
   cursor: pointer;
 
   &:hover {
-    polygon {
-      fill: rgba($color-black, 0.6);
-    }
+    fill: rgba($color-black, 0.6);
   }
 
   &:active {
-    polygon {
-      fill: rgba($color-black, 0.3);
-    }
+    fill: rgba($color-black, 0.3);
   }
 }
 
