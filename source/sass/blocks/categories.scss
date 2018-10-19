@@ -1,7 +1,6 @@
 .categories {
   background-color: $color-background-categories;
   position: relative;
-  margin-bottom: 28px;
 
   &::after {
     @media (min-width: $tablet-width) {
@@ -23,8 +22,8 @@
   min-height: 285px;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: 540px auto;
+  background-position: 50% -8%;
+  background-size: 560px auto;
   overflow: hidden;
   border-top: 1px solid $gray--lighten;
 
@@ -64,7 +63,7 @@
 .categories__title {
   @include reset;
   @include title (27px, 30px);
-  padding: 73px 10px 0 10px;
+  padding-top: 73px;
 
   @media (min-width: $tablet-width) {
     @include title (43px, 50px);
@@ -104,7 +103,7 @@
   justify-content: space-between;
   align-items: center;
   color: $color-background-lighten;
-  padding: 21px 30px;
+  padding: 20px 28px;
   text-align: left;
   transition: all 0.2s linear;
   fill: rgba($color-categories-icon, 0.5);
@@ -141,6 +140,7 @@
 .categories__icon--subjects {
   width: 40px;
   height: 62px;
+  padding-right: 8px;
 }
 
 .categories__icon--toys {
