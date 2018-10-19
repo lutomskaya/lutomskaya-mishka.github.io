@@ -5,6 +5,10 @@
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    margin: 18px 0 0 0;
+  }
 }
 
 .table__row {
@@ -16,11 +20,9 @@
 }
 
 .table__value {
-  padding-left: 10px;
-}
+  padding-left: 15px;
 
-@media (min-width: $tablet-width) {
-  .table {
-    margin: 50px 0 165px 0;
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
   }
 }

@@ -1,3 +1,9 @@
+.social {
+  @media (min-width: $tablet-width) {
+    width: 40%;
+  }
+}
+
 .social__list {
   @include reset;
   display: flex;
@@ -8,8 +14,10 @@
   border-bottom: 1px solid $gray--lighten;
 
   @media (min-width: $tablet-width) {
-    width: 20%;
+    width: 178px;
     margin: auto;
+    margin-right: 8px;
+    padding: 0;
     border: none;
   }
 }

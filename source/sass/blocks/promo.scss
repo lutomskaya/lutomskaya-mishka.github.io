@@ -16,6 +16,11 @@
     background-size: contain;
     background-repeat: repeat-x;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 62px;
+    margin-bottom: 53px;
+  }
 }
 
 .promo__inner {
@@ -28,17 +33,15 @@
   @media (min-width: $desktop-width) {
     position: relative;
     min-height: 720px;
+    max-width: 1150px;
   }
 }
 
 .promo__header {
-  padding-left: 11px;
-
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 65px;
     width: 100%;
   }
 
@@ -49,8 +52,6 @@
 }
 
 .promo__content {
-  padding-left: 11px;
-
   @media (min-width: $tablet-width) {
     width: 48%;
   }
@@ -67,7 +68,7 @@
 
   @media (min-width: $tablet-width) {
     @include title(43px, 50px);
-    width: 90%;
+    width: 85%;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,7 +85,7 @@
 
   @media (min-width: $tablet-width) {
     @include title(17px, 17px);
-    width: 10%;
+    width: 13%;
     text-align: center;
     padding-right: 20px;
   }
@@ -102,6 +103,7 @@
 
   @media (min-width: $tablet-width) {
     @include text(17px, 30px);
+    padding-top: 50px;
   }
 }
 
@@ -112,7 +114,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding-top: 30px;
+    padding-top: 57px;
   }
 
   @media (min-width: $desktop-width) {
@@ -122,13 +124,15 @@
 }
 
 .promo__price {
+  @include reset;
   @include title(17px, 24px);
+  text-align: center;
   color: $color-gray;
-  padding-top: 17px;
+  padding-bottom: 27px;
 
   @media (min-width: $tablet-width) {
     @include title(20px, 24px);
-    padding: 0 138px;
+    padding-bottom: 32px;
   }
 }
 
@@ -138,17 +142,17 @@
   width: 236px;
 
   @media (min-width: $tablet-width) {
-    width: 290px;
+    width: 267px;
   }
 }
 
 .promo__footer {
-  text-align: center;
+  padding-top: 15px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    bottom: 55px;
-    left: 0;
+    bottom: 67px;
+    left: 48px;
   }
 
   @media (min-width: $desktop-width) {

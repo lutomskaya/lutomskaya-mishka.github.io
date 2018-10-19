@@ -1,6 +1,7 @@
 .categories {
   background-color: $color-background-categories;
   position: relative;
+  width: 100%;
 
   &::after {
     @media (min-width: $tablet-width) {
@@ -26,6 +27,8 @@
   background-size: 560px auto;
   overflow: hidden;
   border-top: 1px solid $gray--lighten;
+  margin-bottom: 30px;
+  box-sizing: border-box;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
@@ -33,7 +36,8 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 50px;
-    margin-top: -34px;
+    margin-top: -38px;
+    margin-bottom: 35px;
     min-height: 630px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: 50% 0;
@@ -68,7 +72,7 @@
 
   @media (min-width: $tablet-width) {
     @include title (43px, 50px);
-    padding: 165px  67px 0 67px;
+    padding-top: 148px;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,7 +88,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     width: 100%;
-    margin-top: 365px;
+    margin-top: 371px;
   }
 
   @media (min-width: $desktop-width) {
@@ -123,6 +127,7 @@
 
   @media (min-width: $tablet-width) {
     @include title (20px, 30px);
+    padding: 31px 35px 37px;
   }
 }
 

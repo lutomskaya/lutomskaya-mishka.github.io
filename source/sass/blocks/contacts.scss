@@ -2,6 +2,10 @@
   @include text (15px, 30px);
   color: $color-gray;
   min-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    @include text (17px, 30px);
+  }
 }
 
 .contacts__inner {
@@ -28,11 +32,25 @@
   @include title (18px, 30px);
   @include reset;
   color: $color-black;
-  padding-left: 30px;
+  padding-left: 29px;
 
   @media (min-width: $tablet-width) {
     @include title (43px, 50px);
-    padding-right: 50px;
+    position: relative;
+    padding-right: 100px;
+    padding-left: 46px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -19px;
+      right: 53px;
+      width: 50px;
+      height: 90px;
+      background-image: url("../../img/icon-flag.svg");
+      background-position: right;
+      background-repeat: no-repeat;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -43,8 +61,12 @@
 }
 
 .contacts__item {
-  padding: 25px 0 4px 30px;
+  padding: 25px 0 5px 0;
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 49px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 160px;
@@ -83,6 +105,10 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 51px;
+  }
 }
 
 .contacts__text {
@@ -93,16 +119,21 @@
 .contacts__map {
   margin-bottom: 29px;
   padding-top: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+  }
 }
 
 .contacts__btn {
   width: 240px;
   padding: 14px 9px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: 230px;
+    width: 210px;
     margin-bottom: 60px;
-    margin-top: 40px;
+    margin-top: 46px;
   }
 
   @media (min-width: $desktop-width) {

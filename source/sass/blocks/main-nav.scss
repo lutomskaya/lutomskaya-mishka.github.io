@@ -4,6 +4,9 @@
 
   width: 100%;
   min-width: 320px;
+}
+
+.main-nav__inner {
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
