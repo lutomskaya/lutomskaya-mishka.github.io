@@ -1,77 +1,45 @@
 .features {
-  @include center;
-  min-width: 320px;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
   margin-bottom: 22px;
 }
 
 .features__inner {
   text-align: left;
   padding: 0 10px;
+
+  @media (min-width: $desktop-width) {
+    width: 61%;
+  }
 }
 
 .features__title {
   @include reset;
   @include title (25px, 30px);
+
+  @media (min-width: $tablet-width) {
+    @include title (43px, 50px);
+    text-align: left;
+  }
 }
 
 .features__list {
   @include reset;
   padding-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 
 .features__item {
   @include title (17px, 20px);
   width: 100%;
   padding: 55px 0 29px 0;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 
-  &--eco {
-    background-image: url("../img/icon-feature-flower.svg");
-  }
-
-  &--style {
-    background-image: url("../img/icon-feature-money.svg");
-  }
-
-  &--like {
-    background-image: url("../img/icon-feature-heart.svg");
-  }
-
-  &--manually {
-    background-image: url("../img/icon-feature-ball.svg");
-  }
-
-  &--manufacturer {
-    background-image: url("../img/icon-feature-rocket.svg");
-  }
-
-  &--delivery {
-    background-image: url("../img/icon-feature-gift.svg");
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .features {
-    padding: 0 50px;
-  }
-
-  .features__title {
-    @include title (43px, 50px);
-    text-align: left;
-  }
-
-  .features__list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .features__item {
+  @media (min-width: $tablet-width) {
     @include title (20px, 22px);
     width: 50%;
     padding: 60px 0;
@@ -85,15 +53,5 @@
     &--manufacturer {
       order: -1;
     }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .features {
-    max-width: 1150px;
-  }
-
-  .features__inner {
-    @include container (700px);
   }
 }

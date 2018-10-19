@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class=" page-header__nav main-nav main-nav--opened main-nav--nojs">
+      <nav class=" page-header__nav main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__inner">
           <ul class="main-nav__list site-list">
@@ -60,7 +60,7 @@
     </header>
     <main class="page-main">
       <section class="categories">
-        <div class="categories__inner">
+        <div class="categories__inner container">
           <h1 class="categories__title">Милые штучки ручной <br> работы для дома</h1>
           <ul class="categories__list">
             <li class="categories__item categories__item--subjects">
@@ -82,7 +82,7 @@
           </ul>
         </div>
       </section>
-      <article class="promo">
+      <article class="promo container">
         <div class="promo__inner">
           <div class="promo__header">
             <h2 class="promo__title">Вязаные корзинки</h2>
@@ -118,20 +118,56 @@
           </div>
         </div>
       </article>
-      <section class="features">
+      <section class="features container">
         <div class="features__inner">
           <h2 class="features__title">Коротко о нас:</h2>
           <ul class="features__list">
-            <li class="features__item features__item--eco">Экологически чистые материалы</li>
-            <li class="features__item features__item--style">Скандинавский стиль по российской цене</li>
-            <li class="features__item features__item--like">Увеличивает лайки на фотографиях</li>
-            <li class="features__item features__item--manually">Связано вручную с любовью и умилением</li>
-            <li class="features__item features__item--manufacturer">Поддержка отечественного производителя</li>
-            <li class="features__item features__item--delivery">Поставляется в подарочной упаковке</li>
+            <li class="features__item features__item--eco">
+              <svg class="features__icon" width="31.972" height="37.301">
+                <use xlink:href="img/sprite.svg#featurie-flower">
+                </use>
+              </svg>
+              <span>Экологически чистые материалы</span>
+            </li>
+            <li class="features__item features__item--style">
+              <svg class="features__icon" width="46.575" height="27.332">
+                <use xlink:href="img/sprite.svg#featurie-money">
+                </use>
+              </svg>
+              <span>Скандинавский стиль по российской цене</span>
+            </li>
+            <li class="features__item features__item--like">
+              <svg class="features__icon" width="33.05" height="27.857">
+                <use xlink:href="img/sprite.svg#featurie-heart">
+                </use>
+              </svg>
+              <span>Увеличивает лайки на фотографиях</span>
+            </li>
+            <li class="features__item features__item--manually">
+              <svg class="features__icon" width="34.373" height="34.373">
+                <use xlink:href="img/sprite.svg#featurie-ball">
+                </use>
+              </svg>
+              <span>Связано вручную с любовью и умилением</span>
+            </li>
+            <li class="features__item features__item--manufacturer">
+              <svg class="features__icon" width="54.156" height="23.183">
+                <use xlink:href="img/sprite.svg#featurie-rocket">
+                </use>
+              </svg>
+              <span>Поддержка отечественного производителя</span>
+            </li>
+            <li class="features__item features__item--delivery">
+              <svg class="features__icon" width="32.666" height="32.486" >
+                <use xlink:href="img/sprite.svg#featurie-gift">
+                </use>
+              </svg>
+              <span>Поставляется в подарочной упаковке</span>
+            </li>
           </ul>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews container">
         <div class="reviews__inner slider">
           <h2 class="reviews__title">Отзывы</h2>
           <div class="reviews__list slider__list">
@@ -163,7 +199,7 @@
       <section class="contacts">
         <div class="contacts__inner">
           <h2 class="contacts__title">Контакты</h2>
-          <div class="contacts__wrapper">
+          <div class="contacts__wrapper container">
             <div class="contacts__item">
               <span class="contacts__field">e-mail:</span>
               <a href="mailto:info@mimimishkashop.ru" class="contacts__link">info@mimimishkashop.ru</a>

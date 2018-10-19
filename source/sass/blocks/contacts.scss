@@ -1,9 +1,26 @@
 .contacts {
   @include text (15px, 30px);
   color: $color-gray;
-  min-width: 320px;
-  width: 100%;
-  box-sizing: border-box;
+}
+
+.contacts__inner {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+    flex-direction: column;
+  }
 }
 
 .contacts__title {
@@ -11,11 +28,27 @@
   @include reset;
   color: $color-black;
   padding-left: 30px;
+
+  @media (min-width: $tablet-width) {
+    @include title (43px, 50px);
+    padding-right: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-left: 160px;
+    padding-top: 50px;
+  }
 }
 
 .contacts__item {
   padding: 25px 0 4px 30px;
   display: flex;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 160px;
+    padding-bottom: 20px;
+  }
 }
 
 .contacts__field {
@@ -36,8 +69,11 @@
     right: 0;
     height: 1px;
     background-color: $color-primary;
-  }
 
+    @media (min-width: $tablet-width) {
+      top: 28px;
+    }
+  }
 
   &:hover {
     color: $color-contacts-field;
@@ -54,70 +90,21 @@
 }
 
 .contacts__map {
-  @include center;
   margin-bottom: 29px;
   padding-top: 35px;
-}
-
-.contacts__map img {
-  width: 100%;
-  height: auto;
 }
 
 .contacts__btn {
   width: 240px;
   padding: 14px 9px;
-}
 
-@media (min-width: $tablet-width) {
-  .contacts__title {
-    @include title (43px, 50px);
-    padding-right: 50px;
-  }
-
-  .contacts__wrapper {
-    display: flex;
-  }
-
-  .contacts__link::after {
-    top: 28px;
-  }
-
-  .contacts__btn {
+  @media (min-width: $tablet-width) {
     width: 230px;
     margin-bottom: 60px;
     margin-top: 40px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .contacts__inner {
-    @include container (1150px);
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    position: relative;
-    padding: 0 50px;
-    box-sizing: border-box;
-  }
-
-  .contacts__title {
-    width: 100%;
-    padding-left: 160px;
-    padding-top: 50px;
-  }
-
-  .contacts__item {
-    padding-left: 160px;
-    padding-bottom: 20px;
-  }
-
-  .contacts__wrapper {
-    width: 50%;
-    flex-direction: column;
-  }
-
-  .contacts__btn {
+  @media (min-width: $desktop-width) {
     position: absolute;
     bottom: 0;
     left: 160px;

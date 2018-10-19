@@ -1,11 +1,11 @@
 .product {
   @include reset;
-  @include center;
-  min-width: 320px;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
   margin-top: 30px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .product__item {
@@ -19,17 +19,28 @@
   &:active {
     box-shadow: 0 4px 4px 0 $gray--lighten;
   }
-}
 
-.product__image img {
-  width: 100%;
-  height: auto;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-top: 85px;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30%;
+    flex-direction: column;
+  }
 }
 
 .product__name {
   @include reset;
   @include title (17px, 24px);
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include title (20px, 24px);
+    padding: 0;
+  }
 }
 
 .product__text {
@@ -37,6 +48,47 @@
   @include text (13px, 30px);
   color: $color-gray;
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    @include text (15px, 30px);
+  }
+}
+
+.product__image {
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.product__description {
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.product__description-header {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 180px;
+    border: none;
+    padding-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 30px;
+
+    &--basket-toys {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 .product__description-footer {
@@ -45,77 +97,8 @@
   border-top: 1px solid $gray--lighten;
   padding: 20px;
   margin-bottom: 30px;
-}
 
-.product__price {
-  @include title (15px, 24px);
-}
-
-@media (min-width: $tablet-width) {
-  .product {
-    padding: 0 50px;
-  }
-
-  .product__item {
-    display: flex;
-    margin-top: 85px;
-    width: 100%;
-  }
-
-  .product__image {
-    width: 50%;
-  }
-
-  .product__description {
-    width: 50%;
-    text-align: left;
-  }
-
-  .product__description-header {
-    margin-bottom: 180px;
-    border: none;
-    padding-top: 30px;
-  }
-
-  .product__name {
-    @include title (20px, 24px);
-    padding: 0;
-  }
-
-  .product__text {
-    @include text (15px, 30px);
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .product {
-    max-width: 1150px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .product__item {
-    width: 30%;
-    flex-direction: column;
-  }
-
-  .product__image {
-    width: 100%;
-  }
-
-  .product__description {
-    width: 100%;
-  }
-
-  .product__description-header {
-    margin: 30px;
-
-    &--basket-toys {
-      margin-bottom: 5px;
-    }
-  }
-
-  .product__description-footer {
+  @media (min-width: $desktop-width) {
     border-bottom: none;
     display: flex;
     justify-content: space-between;
@@ -127,4 +110,8 @@
       margin-top: 0;
     }
   }
+}
+
+.product__price {
+  @include title (15px, 24px);
 }

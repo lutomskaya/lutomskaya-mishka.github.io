@@ -1,7 +1,11 @@
 .site-list {
-  @include center;
   @include reset;
-  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }
 
 .site-list__item {
@@ -14,60 +18,8 @@
   &--basket {
     display: flex;
   }
-}
 
-.site-list-item__promo {
-  display: none;
-}
-
-.site-list__icon {
-  position: absolute;
-  top: 31px;
-  left: 30px;
-  fill: rgba($color-black, 0.3);
-}
-
-.site-list__link {
-  @include title (17px, 24px);
-  position: relative;
-  display: block;
-  text-align: left;
-  text-decoration: none;
-  color: $color-black;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  padding-left: 76px;
-
-  &:hover {
-    color: rgba($color-black, 0.3);
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.site-list__link:hover .site-list__icon, {
-  fill: $color-primary;
-}
-
-.site-list__link--logo {
-  text-align: center;
-  padding-left: 0;
-}
-
-.site-list__intro {
-  display: none;
-}
-
-@media (min-width: $tablet-width) {
-  .site-list {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .site-list__item {
+  @media (min-width: $tablet-width) {
     margin: 0;
 
     &--catalog {
@@ -84,7 +36,6 @@
 
     &--search {
       width: 13%;
-      box-sizing: border-box;
       border-right: 1px solid $gray--lighten;
       border-left: 1px solid $gray--lighten;
     }
@@ -95,45 +46,8 @@
     }
   }
 
-  .site-list__link {
-    @include title (15px, 24px);
-    padding: 10px 0;
-    text-align: left;
-
-    &--search {
-      font-size: 0;
-    }
-
-    &--basket {
-      text-align: right;
-    }
-  }
-
-  .site-list__logo {
-    width: 48%;
-  }
-
-  .site-list__link--logo {
-    text-align: left;
-  }
-
-  .site-list__intro {
-    display: block;
-
-    &--text {
-      @include reset;
-      @include text (15px, 24px);
-      color: $color-gray;
-      text-align: right;
-      margin-top: -35px;
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .site-list__item {
+  @media (min-width: $desktop-width) {
     border-bottom: none;
-
 
     &--catalog {
       order: -1;
@@ -151,26 +65,121 @@
       flex-grow: 0;
     }
   }
+}
 
-  .site-list__link {
-    @include title (17px, 24px);
+.site-list-item__promo {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 18%;
+    text-align: left;
+  }
+}
+
+.site-list__intro {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+
+    &--text {
+      @include reset;
+      @include text (15px, 24px);
+      color: $color-gray;
+      text-align: right;
+      margin-top: -35px;
+    }
+  }
+}
+
+.site-list__link {
+  @include title (17px, 24px);
+  position: relative;
+
+  display: block;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 76px;
+
+  text-align: left;
+
+  color: $color-black;
+
+  &:hover {
+    color: rgba($color-black, 0.3);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include title (15px, 24px);
+    padding: 10px 0;
+    text-align: left;
 
     &--search {
       font-size: 0;
     }
+
+    &--basket {
+      text-align: right;
+    }
   }
 
-  .site-list__logo {
+  @media (min-width: $desktop-width) {
+    @include title (17px, 24px);
+  }
+}
+
+.site-list__icon {
+  position: absolute;
+  top: 31px;
+  left: 30px;
+  fill: rgba($color-black, 0.3);
+}
+
+.site-list__link:hover .site-list__icon, {
+  fill: $color-primary;
+}
+
+.site-list__logo {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 48%;
+  }
+
+  @media (min-width: $desktop-width) {
     width: 26%;
   }
+}
 
-  .site-list__link--logo {
-    text-align: center;
+.site-list__logo img {
+  width: 86px;
+  height: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 113px;
+    height: 46px;
   }
 
-  .site-list-item__promo {
-    display: flex;
-    width: 18%;
+  @media (min-width: $desktop-width) {
+    width: 149px;
+    height: 72px;
+  }
+}
+
+.site-list__link--logo {
+  text-align: center;
+  padding-left: 0;
+
+  @media (min-width: $tablet-width) {
     text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
   }
 }

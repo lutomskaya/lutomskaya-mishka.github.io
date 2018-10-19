@@ -1,52 +1,44 @@
 .catalog {
   min-width: 320px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .catalog__intro {
   min-height: 250px;
   position: relative;
   background-color: $color-background-darken;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -34px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 11px;
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: repeat-x;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -59px;
+  }
 }
 
 .catalog__inner {
-  @include center;
+  @media (min-width: $desktop-width) {
+    padding: 0 50px;
+    max-width: 1150px;
+  }
 }
 
 .catalog__title {
   @include reset;
-  @include center;
   @include title (27px, 30px);
   padding-top: 100px;
-}
-
-@media (min-width: $tablet-width) {
-  .catalog__intro {
-    margin-top: -34px;
-  }
-
-  .catalog__intro::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 11px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: repeat-x;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .catalog__inner {
-    padding: 0 50px;
-    max-width: 1150px;
-  }
-
-  .catalog__intro {
-    margin-top: -59px;
-  }
 }

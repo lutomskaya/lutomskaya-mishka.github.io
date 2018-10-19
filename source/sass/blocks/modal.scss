@@ -11,8 +11,6 @@
 }
 
 .modal__inner {
-  @include container (320px);
-  @include center;
   min-height: 340px;
   z-index: 2;
   background-color: $color-background-lighten;

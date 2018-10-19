@@ -1,7 +1,7 @@
 .btn {
   @include reset;
-  @include center;
   @include title (17px, 20px);
+  text-align: center;
   display: block;
   padding: 10px;
   text-transform: uppercase;

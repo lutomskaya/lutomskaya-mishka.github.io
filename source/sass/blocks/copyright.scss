@@ -2,11 +2,20 @@
   display: flex;
   justify-content: center;
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 24%;
+    padding: 0;
+  }
 }
 
 .copyright__text {
   @include title (19px, 18px);
   padding: 6px 21px 0 3px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 20px;
+  }
 }
 
 .copyright__link {
@@ -20,16 +29,5 @@
 
   &:active {
     fill-opacity: 0.3;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .copyright {
-    width: 185px;
-    padding: 0;
-  }
-
-  .copyright__text {
-    padding-right: 20px;
   }
 }

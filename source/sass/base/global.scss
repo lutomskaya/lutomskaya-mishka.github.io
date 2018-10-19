@@ -1,7 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -18,4 +26,20 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1150;
+    padding: 0 50px;
+  }
 }
