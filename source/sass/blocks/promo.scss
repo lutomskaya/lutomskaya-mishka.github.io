@@ -108,6 +108,7 @@
 .promo__image {
   overflow: hidden;
   padding-top: 30px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -133,7 +134,7 @@
 
 .promo__btn {
   padding: 14px 10px;
-  margin-top: 25px;
+  margin: 0 auto;
   width: 236px;
 
   @media (min-width: $tablet-width) {
@@ -142,6 +143,8 @@
 }
 
 .promo__footer {
+  text-align: center;
+
   @media (min-width: $tablet-width) {
     position: absolute;
     bottom: 55px;

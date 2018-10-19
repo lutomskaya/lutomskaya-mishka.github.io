@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include container (1150px);
+    max-width: 1150px;
   }
 }
 
