@@ -67,10 +67,12 @@
     &--basket {
       width: 24%;
       flex-grow: 0;
+      justify-content: right;
     }
+
+
   }
 }
-
 .site-list-item__promo {
   display: none;
 
@@ -138,6 +140,10 @@
 
   @media (min-width: $desktop-width) {
     @include title (17px, 24px);
+
+    &--search {
+      font-size: 0;
+    }
   }
 }
 
@@ -168,6 +174,7 @@
 
   @media (min-width: $desktop-width) {
     width: 26%;
+    justify-content: center;
   }
 }
 
