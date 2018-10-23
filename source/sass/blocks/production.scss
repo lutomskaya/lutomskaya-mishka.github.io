@@ -1,3 +1,8 @@
+.production {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
 .production__inner {
   @include reset;
   display: flex;
