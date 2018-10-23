@@ -1,6 +1,5 @@
 .product {
   @include reset;
-  margin-top: 30px;
 
   @media (min-width: $desktop-width) {
     display: flex;
@@ -22,20 +21,29 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-top: 85px;
+    margin: 0;
+    margin-bottom: 46px;
     width: 100%;
   }
 
   @media (min-width: $desktop-width) {
     width: 30%;
     flex-direction: column;
+    margin-bottom: 0;
   }
+}
+
+.product__description {
+  padding: 0 27px;
+}
+
+.product__description-header {
+  padding-top: 23px;
 }
 
 .product__name {
   @include reset;
   @include title (17px, 24px);
-  padding: 20px;
 
   @media (min-width: $tablet-width) {
     @include title (20px, 24px);
@@ -47,7 +55,8 @@
   @include reset;
   @include text (13px, 30px);
   color: $color-gray;
-  padding-bottom: 10px;
+  padding-bottom: 19px;
+  padding-top: 4px;
 
   @media (min-width: $tablet-width) {
     @include text (15px, 30px);
@@ -56,7 +65,7 @@
 
 .product__image {
   @media (min-width: $tablet-width) {
-    width: 50%;
+    width: 60%;
   }
 
   @media (min-width: $desktop-width) {
@@ -71,47 +80,70 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: 83%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .product__description-header {
   @media (min-width: $tablet-width) {
-    margin-bottom: 180px;
+    margin-bottom: 155px;
     border: none;
-    padding-top: 30px;
+    padding-top: 27px;
+
+    &--basket-toys {
+      margin-bottom: 131px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin: 30px;
-
+    padding-top: 23px;
+    margin-bottom: 18px;
+    
     &--basket-toys {
-      margin-bottom: 5px;
+      margin-bottom: -5px;
     }
   }
 }
 
 .product__description-footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-top: 1px solid $gray--lighten;
-  padding: 20px;
-  margin-bottom: 30px;
+  padding: 20px 0;
+  padding-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+    padding-top: 24px;
+    padding-left: 4px;
+  }
 
   @media (min-width: $desktop-width) {
     border-bottom: none;
-    display: flex;
-    justify-content: space-between;
     padding: 0;
-    padding-top: 20px;
-    margin: 30px;
-
-    &--basket-toys {
-      margin-top: 0;
-    }
+    padding-top: 23px;
+    padding-left: 0;
+    padding-bottom: 25px;
   }
-}
+}  
 
 .product__price {
   @include title (15px, 24px);
+
+  @media (min-width: $tablet-width) {
+    @include title (17px, 24px);
+  }
+}
+
+.product__buy {
+  @media (min-width: $tablet-width) {
+    width: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 59px;
+  }
 }

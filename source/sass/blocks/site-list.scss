@@ -35,17 +35,18 @@
       order: 1;
       width: 25%;
       border-bottom: none;
+      padding-left: 24px;
     }
 
     &--search {
-      width: 10%;
+      width: 13%;
       border-right: 1px solid $gray--lighten;
       border-left: 1px solid $gray--lighten;
     }
 
     &--basket {
       @include title (17px, 24px);
-      width: 47%;
+      width: 38.6%;
       text-align: right;
     }
   }
@@ -62,17 +63,21 @@
     &--knitting {
       order: -1;
       width: 18%;
+      padding-left: 30px;
+    }
+
+    &--search {
+      width: 8%;
     }
 
     &--basket {
-      width: 24%;
+      width: 25%;
       flex-grow: 0;
       justify-content: right;
     }
-
-
   }
 }
+
 .site-list-item__promo {
   display: none;
 
@@ -80,6 +85,10 @@
     display: flex;
     width: 18%;
     text-align: left;
+
+    &--sale {
+      padding-left: 33px;
+    }
   }
 }
 
@@ -97,6 +106,7 @@
       color: $color-gray;
       text-align: right;
       margin-top: -35px;
+      padding-top: 2px;
     }
   }
 
@@ -116,6 +126,14 @@
 
   color: $color-black;
 
+  &--search {
+    padding-left: 33px;
+  }
+
+  &--basket {
+    padding-left: 33px;
+  }
+
   &:hover {
     color: rgba($color-black, 0.3);
   }
@@ -126,6 +144,8 @@
 
   @media (min-width: $tablet-width) {
     @include title (15px, 24px);
+    display: flex;
+    width: 100%;
     padding: 10px 0;
     text-align: left;
 
@@ -134,7 +154,9 @@
     }
 
     &--basket {
+      @include title (17px, 24px);
       text-align: right;
+      padding-top: 0;
     }
   }
 
@@ -144,20 +166,34 @@
     &--search {
       font-size: 0;
     }
+
+    &--basket {
+      padding-top: 6px;
+    }
+
+    &--promo {
+      @include text (15px, 24px);
+      padding-top: 2px;
+    }
   }
 }
 
 .site-list__icon {
-  position: absolute;
-  top: 31px;
-  left: 30px;
+  margin-left: auto;
+  margin-right: 20px;
   fill: rgba($color-black, 0.3);
 
   @media (min-width: $tablet-width) {
+    margin-left: 27px;
+    margin-right: 28px;
+
     &--search {
-      top: 10px;
-      left: 30px;
+      margin-left: 31px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 32px;
   }
 }
 
@@ -169,12 +205,11 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    width: 42%;
+    width: 48%;
   }
 
   @media (min-width: $desktop-width) {
-    width: 26%;
-    justify-content: center;
+    width: 27.5%;
   }
 }
 
@@ -204,6 +239,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    text-align: center;
+    padding-left: 41px;
+    padding-top: 16px;
   }
 }

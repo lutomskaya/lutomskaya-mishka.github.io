@@ -4,6 +4,7 @@
   flex-wrap: wrap;
 
   border: 1px solid $gray--lighten;
+  margin: 0 30px;
   margin-bottom: 60px;
 
   &:hover {
@@ -12,6 +13,11 @@
 
   &:active {
     box-shadow: 0 4px 4px 0 $gray--lighten;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,12 +33,29 @@
 .production__process {
   @include reset;
   @include title (17px, 24px);
+  position: relative;
   text-align: left;
-  padding: 30px;
-  padding-left: 120px;
+  padding: 26px 0;
+  padding-left: 90px;
+
+  &::after {
+    content: url("../img/icon-video.svg");
+    position: absolute;
+    top: 30px;
+    left: 34px;
+
+    width: 35px;
+    height: 35px;
+  }
 
   @media (min-width: $tablet-width) {
     @include title (20px, 24px);
+    padding-left: 106px;
+    padding-top: 34px;
+
+    &::after {
+      left: 43px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -40,16 +63,37 @@
     padding-top: 95px;
     padding-left: 0;
     padding-bottom: 0;
+
+    &::after {
+      left: 1px;
+      top: 41px;
+    }
   }
 }
 
 .production__video {
+  position: relative;
   text-align: center;
+
+  &::after {
+    content: url("../img/icon-play.svg");
+    position: absolute;
+    top: 33px;
+    left: 79px;
+
+    width: 102px;
+    height: 78px;
+  }
 
   @media (min-width: $tablet-width) {
     order: -1;
     width: 100%;
     min-height: 455px;
+
+    &::after {
+      top: 41%;
+      left: 42.5%;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -67,30 +111,32 @@
   @include text (13px, 24px);
   color: $color-gray;
   text-align: left;
-  padding: 30px 60px;
+  padding: 22px 33px;
 
   @media (min-width: $tablet-width) {
     @include text (15px, 24px);
-    padding: 30px 52px;
+    padding: 10px 36px 42px 40px;
   }
 
   @media (min-width: $desktop-width) {
     width: 230px;
-    padding-top: 10px;
+    padding-top: 19px;
   }
 }
 
 .production__btn {
-  margin-bottom: 30px;
-  width: 190px;
+  margin: 0 auto;
+  width: 168px;
+  padding: 14px 11px;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet-width) {
-    width: 584px;
-    margin-bottom: 50px;
+    width: 559px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 230px;
-    margin-bottom: 50px;
+    width: 203px;
+    margin-bottom: 41px;
   }
 }

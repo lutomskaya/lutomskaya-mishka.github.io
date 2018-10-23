@@ -6,13 +6,12 @@
 .page-footer__inner {
   min-width: 320px;
   margin: 0 auto;
-  margin-top: 40px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 50px 50px;
   }
 
   @media (min-width: $desktop-width) {

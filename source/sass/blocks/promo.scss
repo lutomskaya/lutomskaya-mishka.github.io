@@ -21,6 +21,10 @@
     padding-bottom: 62px;
     margin-bottom: 53px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .promo__inner {
@@ -46,8 +50,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 96px;
+    left: 0;
+    z-index: 2;
   }
 }
 
@@ -57,8 +63,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 125px;
-    width: 60%;
+    padding-top: 164px;
+    padding-left: 174px;
+    width: 35%;
   }
 }
 
@@ -73,6 +80,8 @@
 
   @media (min-width: $desktop-width) {
     @include title(53px, 57px);
+    padding-top: 12px;
+    padding-left: 15px;
   }
 }
 
@@ -92,6 +101,9 @@
 
   @media (min-width: $desktop-width) {
     order: -1;
+    width: 10%;
+    padding-top: 23px;
+    padding-left: 30px;
   }
 }
 
@@ -156,6 +168,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    left: 70px;
+    left: 176px;
+    bottom: 29px;
   }
 }

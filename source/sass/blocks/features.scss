@@ -4,13 +4,17 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 38px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 43px;
+  }
 }
 
 .features__inner {
   text-align: left;
 
   @media (min-width: $desktop-width) {
-    width: 61%;
+    width: 70%;
   }
 }
 
@@ -20,6 +24,11 @@
 
   @media (min-width: $tablet-width) {
     @include title (43px, 50px);
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include title (53px, 57px);
     text-align: left;
   }
 }
@@ -60,6 +69,10 @@
       order: -1;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0;
+  }
 }
 
 .features__icon {
@@ -77,6 +90,38 @@
   &--manufacturer {
     padding-left: 0;
     padding-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--eco {
+      padding-left: 9px;
+    }
+
+    &--manually {
+      padding-top: 4px;
+    }
+
+    &--manufacturer {
+      padding-bottom: 11px;
+    }
+
+    &--style {
+      padding-bottom: 3px;
+      padding-top: 5px;
+      padding-left: 9px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--style {
+      padding-top: 0;
+      padding-left: 3px;
+    }
+
+    &--like {
+      padding-left: 11px;
+      padding-bottom: 4px;
+    }
   }
 }
 
