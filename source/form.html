@@ -4,7 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script src="./js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -122,7 +129,7 @@
             <div class="form-group__inner form-group__inner--contacts container">
               <p class="form-group__title form-group__title--contacts">Тел</p>
               <input class="form-group__field form-group__field--gray" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"   name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-              <svg class="form-group__icon" width="25" height="25">
+              <svg class="form-group__icon form-group__icon--contacts" width="25" height="25">
                 <use xlink:href="img/sprite.svg#form-icon-phone">
                 </use>
               </svg>
@@ -132,7 +139,7 @@
             <div class="form-group__inner form-group__inner--mail container">
               <p class="form-group__title">E-mail</p>
               <input class="form-group__field form-group__field--gray" type="email" placeholder="Ваш Email"   name="email" required>
-              <svg class="form-group__icon" width="32" height="32">
+              <svg class="form-group__icon form-group__icon--mail" width="32" height="32">
                 <use xlink:href="img/sprite.svg#form-icon-mail">
                 </use>
               </svg>

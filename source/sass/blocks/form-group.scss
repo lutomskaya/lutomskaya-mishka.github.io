@@ -57,6 +57,14 @@
   margin: auto;
   max-width: 1150px;
 
+  &--contacts {
+    position: relative;
+  }
+
+  &--mail {
+    position: relative;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0 50px;
     display: flex;
@@ -65,7 +73,7 @@
 
   &--color {
     padding-top: 29px;
-    
+
     @media (min-width: $tablet-width) {
       padding-bottom: 29px;
     }
@@ -79,7 +87,7 @@
     &--mail {
       padding-bottom: 41px;
     }
-  }  
+  }
 }
 
 .form-group__wrapper {
@@ -135,17 +143,17 @@
   width: 100%;
   padding: 18px 0 0 65px;
   margin-bottom: 7px;
-  
+
   &--gray {
     padding: 18px 0 18px 65px;
 
     @media (min-width: $tablet-width) {
       width: 33%;
-    } 
+    }
 
     @media (min-width: $desktop-width) {
       width: 23%;
-    } 
+    }
   }
 
   &--text {
@@ -190,7 +198,13 @@
 .form-group__icon {
   position: absolute;
   right: 38px;
+  bottom: 24px;
   opacity: 0.3;
+
+  &--mail {
+    bottom: 14px;
+    right: 32px;
+  }
 
   @media (min-width: $tablet-width) {
     right: 71px;
@@ -199,7 +213,7 @@
   @media (min-width: $desktop-width) {
     right: 230px;
   }
-}  
+}
 
 .form-group__field {
   @include text (17px, 18px);
@@ -338,7 +352,7 @@
   border: none;
   border-bottom: 2px solid $color-black;
   outline: none;
-  
+
   @media (min-width: $desktop-width) {
     width: 72%;
   }

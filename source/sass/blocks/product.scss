@@ -101,7 +101,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 23px;
     margin-bottom: 18px;
-    
+
     &--basket-toys {
       margin-bottom: -5px;
     }
@@ -128,7 +128,7 @@
     padding-left: 0;
     padding-bottom: 25px;
   }
-}  
+}
 
 .product__price {
   @include title (15px, 24px);
