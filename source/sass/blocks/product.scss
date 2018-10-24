@@ -33,14 +33,6 @@
   }
 }
 
-.product__description {
-  padding: 0 27px;
-}
-
-.product__description-header {
-  padding-top: 23px;
-}
-
 .product__name {
   @include reset;
   @include title (17px, 24px);
@@ -74,6 +66,8 @@
 }
 
 .product__description {
+  padding: 0 27px;
+
   @media (min-width: $tablet-width) {
     width: 50%;
     text-align: left;
@@ -88,6 +82,8 @@
 }
 
 .product__description-header {
+  padding-top: 23px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 155px;
     border: none;

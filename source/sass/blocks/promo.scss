@@ -23,7 +23,7 @@
     padding-bottom: 62px;
     margin-bottom: 53px;
 
-    &:after {
+    &::after {
       top: 98%;
       height: 17px;
 
@@ -35,7 +35,7 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 65px;
 
-    &:after {
+    &::after {
       width: 1050px;
       height: 23px;
       background-position: 24px 0;

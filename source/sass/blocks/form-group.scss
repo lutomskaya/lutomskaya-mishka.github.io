@@ -59,6 +59,7 @@
 
   &--contacts {
     position: relative;
+    padding-top: 31px;
   }
 
   &--mail {
@@ -77,10 +78,6 @@
     @media (min-width: $tablet-width) {
       padding-bottom: 29px;
     }
-  }
-
-  &--contacts {
-    padding-top: 31px;
   }
 
   @media (min-width: $desktop-width) {
@@ -162,7 +159,7 @@
 
   @media (min-width: $tablet-width) {
     @include title (19px, 19px);
-        padding: 18px 0 31px 81px;
+    padding: 18px 0 31px 81px;
 
     &--text {
       padding: 18px 0 8px;
@@ -443,6 +440,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 51px 0;;
+    margin: 51px 0;
   }
 }

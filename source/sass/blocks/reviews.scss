@@ -18,7 +18,6 @@
     background-size: 320px 7px;
   }
 
-
   @media (min-width: $tablet-width) {
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -26,7 +25,7 @@
     padding-bottom: 130px;
     margin-bottom: 62px;
 
-    &:after {
+    &::after {
       top: 98%;
       height: 17px;
 
@@ -37,20 +36,21 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/review@2x.jpg");
     }
+  }
 
-    @media (min-width: $desktop-width) {
-      background-size: 30.5% auto;
-      background-position: 6% 0;
+  @media (min-width: $desktop-width) {
+    background-size: 30.5% auto;
+    background-position: 6% 0;
 
-      &:after {
-        width: 1050px;
-        height: 23px;
-        background-position: 24px 0;
-        background-size: 1050px  23px;
-        transform: translateX(5%);
-      }
+    &::after {
+      width: 1050px;
+      height: 23px;
+      background-position: 24px 0;
+      background-size: 1050px  23px;
+      transform: translateX(5%);
     }
   }
+}
 
 .reviews__inner {
   text-align: left;
