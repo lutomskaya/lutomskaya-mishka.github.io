@@ -119,8 +119,8 @@
   padding: 22px 33px;
 
   @media (min-width: $tablet-width) {
-    @include text (15px, 24px);
-    padding: 10px 36px 42px 40px;
+    @include text (15px, 28px);
+    padding: 8px 36px 42px 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -137,7 +137,7 @@
 
   @media (min-width: $tablet-width) {
     width: 559px;
-    margin-bottom: 48px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
