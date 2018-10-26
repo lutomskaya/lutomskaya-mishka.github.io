@@ -36,6 +36,16 @@
 .product__name {
   @include reset;
   @include title (17px, 24px);
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     @include title (20px, 24px);
@@ -141,5 +151,26 @@
 
   @media (min-width: $desktop-width) {
     width: 59px;
+  }
+}
+
+.catalog-list__icon {
+  fill: rgba($color-black, 0.2);
+
+  &:hover,
+  &:focus {
+    fill: $color-primary;
+  }
+
+  &:active {
+    fill: rgba($color-primary, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 32px;
   }
 }

@@ -12,9 +12,14 @@
 
 .features__inner {
   text-align: left;
+  padding-top: 34px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 68px;
+  }
 
   @media (min-width: $desktop-width) {
-    width: 70%;
+    padding-top: 62px;
   }
 }
 
@@ -30,6 +35,7 @@
   @media (min-width: $desktop-width) {
     @include title (53px, 57px);
     text-align: left;
+    padding-left: 168px;
   }
 }
 
@@ -41,6 +47,11 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 700px;
+    margin: 0 auto;
   }
 }
 

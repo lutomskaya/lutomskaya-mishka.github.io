@@ -1,9 +1,6 @@
 .modal {
   display: none;
-  min-width: 320px;
-  min-height: 340px;
-  text-align: center;
-  margin: 0 auto;
+  z-index: 5;
 }
 
 .modal__inner {
@@ -12,8 +9,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: $color-background-lighten;
-  box-shadow: 0 4px 10px 0 $gray--lighten;
-  z-index: 5;
+  border-top: 1px solid $gray-modal;
+  box-shadow: 0 4px 10px 0 rgba($color-black, 0.25);
+  z-index: 10;
+  min-width: 320px;
+  min-height: 340px;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: 566px;
+  }
 }
 
 .modal-show {
@@ -22,7 +28,7 @@
 
 .modal__overlay {
   position: fixed;
-  background-color: rgba($color-background-lighten, 0.8);
+  background-color: rgba($color-background-lighten, 0.6);
   top: 0;
   left: 0;
   width: 100%;
@@ -33,7 +39,7 @@
   @include reset;
   @include title (25px, 30px);
   text-transform: uppercase;
-  padding: 40px 85px 30px 85px;
+  padding: 30px 50px 22px 50px;
 }
 
 .modal__label {
@@ -54,7 +60,18 @@
   @include title (17px, 16px);
   display: inline-block;
   padding: 20px 30px;
-  border: 1px solid $gray--lighten;
+  border: 2px solid $gray--lighten;
+  margin-left: 13px;
+
+  &--active {
+    margin-left: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &--active {
+    border: 2px solid $color-primary;
+  }
 }
 
 .modal-form__item input[type="radio"]:checked + label {
@@ -62,8 +79,10 @@
 }
 
 .modal-form__btn {
-  width: 100%;
-  margin-top: 30px;
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 35px;
+  padding: 15px;
   background-color: $color-primary;
   color: $color-background-lighten;
   border: none;

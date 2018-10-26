@@ -24,17 +24,15 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+  }
+}
 
-    &:hover {
-      path {
-        fill: $color-contacts-field;
-      }
-    }
+.page-footer__logo-icon {
+  &:hover {
+    fill: $color-contacts-field;
+  }
 
-    &:active {
-      path {
-        fill-opacity: 0.3;
-      }
-    }
+  &:active {
+    fill-opacity: 0.3;
   }
 }
