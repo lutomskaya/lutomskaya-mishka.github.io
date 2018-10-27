@@ -20,22 +20,24 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0;
     display: flex;
+    margin: 0;
+    padding-top: 10px;
     align-items: center;
-    padding-top: 5px;
 
     &--catalog {
       order: 1;
       width: 21.7%;
+      padding-top: 5px;
       border-bottom: none;
     }
 
     &--knitting {
       order: 1;
       width: 25%;
-      border-bottom: none;
       padding-left: 24px;
+      padding-top: 5px;
+      border-bottom: none;
     }
 
     &--search {
@@ -78,12 +80,17 @@
   }
 }
 
+.site-list__item:nth-child(n+8) {
+  order: 2;
+}
+
 .site-list-item__promo {
   display: none;
 
   @media (min-width: $desktop-width) {
     display: flex;
     width: 18%;
+    padding-top: 14px;
     text-align: left;
 
     &--sale {
@@ -102,11 +109,11 @@
     &--text {
       @include reset;
       @include text (15px, 24px);
-      color: $color-gray;
-      text-align: right;
       margin-top: -35px;
       padding: 0 50px;
       padding-top: 2px;
+      color: $color-gray;
+      text-align: right;
     }
   }
 
@@ -118,12 +125,10 @@
 .site-list__link {
   @include title (17px, 24px);
   position: relative;
-
   display: block;
   padding-top: 27px;
   padding-bottom: 27px;
   padding-left: 76px;
-
   color: $color-black;
 
   &--search {
@@ -147,7 +152,7 @@
     @include title (15px, 24px);
     display: flex;
     width: 100%;
-    padding: 10px 0;
+    padding: 13px 0 10px;
     text-align: left;
 
     &--search {
@@ -157,7 +162,7 @@
     &--basket {
       @include title (17px, 24px);
       text-align: right;
-      padding-top: 0;
+      padding-top: 8px;
     }
   }
 
@@ -168,12 +173,8 @@
       font-size: 0;
     }
 
-    &--basket {
-      padding-top: 6px;
-    }
-
     &--promo {
-      @include text (15px, 24px);
+      @include title (15px, 24px);
       padding-top: 2px;
     }
   }
@@ -230,10 +231,14 @@
 }
 
 .site-list__link--logo {
-  text-align: center;
   padding-left: 0;
   padding-top: 13px;
   padding-bottom: 13px;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -242,5 +247,6 @@
   @media (min-width: $desktop-width) {
     padding-left: 41px;
     padding-top: 16px;
+    padding-bottom: 0;
   }
 }

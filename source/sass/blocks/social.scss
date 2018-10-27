@@ -16,12 +16,8 @@
   @media (min-width: $tablet-width) {
     width: 178px;
     padding: 0;
+    margin: auto;
     border: none;
-    padding-left: 133px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 210px;
   }
 }
 

@@ -5,9 +5,9 @@
 }
 
 .form-main__intro {
+  position: relative;
   width: 100%;
   min-height: 180px;
-  position: relative;
   background-color: $color-background-darken;
 
   @media (min-width: $tablet-width) {
@@ -40,9 +40,9 @@
 .form-main__slogan {
   @include reset;
   @include text (13px, 24px);
-  color: $color-gray;
   padding: 22px 3px 0 3px;
   text-align: left;
+  color: $color-gray;
 
   @media (min-width: $tablet-width) {
     @include text (17px, 30px);

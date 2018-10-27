@@ -7,7 +7,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <script src="./js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
     <script>
       document.createElement( "picture" );
     </script>
@@ -37,7 +39,7 @@
             <li class="site-list__item site-list__item--search">
               <a class="site-list__link site-list__link--search" href="#">
                 <svg class="site-list__icon site-list__icon--search" width="18" height="18">
-                  <use xlink:href="img/sprite.svg#site-list-search">
+                  <use xlink:href="img/sprite.svg#sprite-icon-search">
                   </use>
                 </svg>
                 Поиск по сайту
@@ -46,7 +48,7 @@
             <li class="site-list__item site-list__item--basket">
               <a class="site-list__link site-list__link--basket" href="#">
                 <svg class="site-list__icon site-list__icon--basket" width="21" height="18">
-                  <use xlink:href="img/sprite.svg#site-list-basket">
+                  <use xlink:href="img/sprite.svg#sprite-icon-cart">
                   </use>
                 </svg>
                 <span>Корзина: пока пуста</span>
@@ -74,7 +76,7 @@
               <a href="#" class="categories__link categories__link--subjects">
                 <span class="categories__text">Предметы интерьера</span>
                 <svg class="categories__icon--subjects" width="40.219" height="62.411">
-                  <use xlink:href="img/sprite.svg#categories-subjects">
+                  <use xlink:href="img/sprite.svg#sprite-icon-interior">
                   </use>
                 </svg>
               </a>
@@ -83,7 +85,7 @@
               <a href="#" class="categories__link categories__link--toys">
                 <span class="categories__text">Детские игрушки</span>
                 <svg class="categories__icon--toys" width="60" height="59.62">
-                  <use xlink:href="img/sprite.svg#categories-toys">
+                  <use xlink:href="img/sprite.svg#sprite-icon-toy">
                   </use>
                 </svg>
               </a>
@@ -116,6 +118,9 @@
           </div>
           <div class="promo__image">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
               <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
@@ -123,7 +128,7 @@
           </div>
           <div class="promo__footer">
             <p class="promo__price">Цена: 990 руб.</p>
-            <a href="#" class="promo__btn btn promo__btn--link">Заказать</a>
+            <a href="#" class="promo__btn btn promo__btn--link js-modal-open">Заказать</a>
           </div>
         </div>
       </article>
@@ -133,42 +138,42 @@
           <ul class="features__list">
             <li class="features__item features__item--eco">
               <svg class="features__icon features__icon--eco" width="31.972" height="37.301">
-                <use xlink:href="img/sprite.svg#featurie-flower">
+                <use xlink:href="img/sprite.svg#sprite-icon-feature-flower">
                 </use>
               </svg>
               <span class="features__text">Экологически чистые&nbsp;материалы</span>
             </li>
             <li class="features__item features__item--style">
               <svg class="features__icon features__icon--style" width="46.575" height="27.332">
-                <use xlink:href="img/sprite.svg#featurie-money">
+                <use xlink:href="img/sprite.svg#sprite-icon-feature-money">
                 </use>
               </svg>
               <span class="features__text">Скандинавский стиль по&nbsp;российской цене</span>
             </li>
             <li class="features__item features__item--like">
               <svg class="features__icon features__icon--like" width="33.05" height="27.857">
-                <use xlink:href="img/sprite.svg#featurie-heart">
+                <use xlink:href="img/sprite.svg#sprite-icon-feature-heart">
                 </use>
               </svg>
               <span class="features__text">Увеличивает лайки на&nbsp;фотографиях</span>
             </li>
             <li class="features__item features__item--manually">
               <svg class="features__icon features__icon--manually" width="34.373" height="34.373">
-                <use xlink:href="img/sprite.svg#featurie-ball">
+                <use xlink:href="img/sprite.svg#sprite-icon-feature-ball">
                 </use>
               </svg>
               <span class="features__text">Связано вручную с любовью&nbsp;и&nbsp;умилением</span>
             </li>
             <li class="features__item features__item--manufacturer">
               <svg class="features__icon features__icon--manufacturer" width="54.156" height="23.183">
-                <use xlink:href="img/sprite.svg#featurie-rocket">
+                <use xlink:href="img/sprite.svg#sprite-icon-feature-rocket">
                 </use>
               </svg>
               <span class="features__text">Поддержка отечественного производителя</span>
             </li>
             <li class="features__item features__item--delivery">
               <svg class="features__icon features__icon--delivery" width="32.666" height="32.486" >
-                <use xlink:href="img/sprite.svg#featurie-gift">
+                <use xlink:href="img/sprite.svg#sprite-icon-feature-gift">
                 </use>
               </svg>
               <span class="features__text">Поставляется в подарочной&nbsp;упаковке</span>
@@ -190,13 +195,13 @@
             <div class="reviews__toggles slider__toggles">
               <button class="reviews__btn-nav reviews__btn-nav--back" aria-label="Предыдущий отзыв" type="button">
                 <svg class="reviews__btn-icon" width="50" height="26.003">
-                  <use xlink:href="img/sprite.svg#reviews-back">
+                  <use xlink:href="img/sprite.svg#sprite-icon-left-arrow">
                   </use>
                 </svg>
               </button>
               <button class="reviews__btn-nav reviews__btn-nav--next" aria-label="Следующий отзыв" type="button">
                 <svg class="reviews__btn-icon" width="50px" height="26.003px">
-                  <use xlink:href="img/sprite.svg#reviews-next">
+                  <use xlink:href="img/sprite.svg#sprite-icon-right-arrow">
                   </use>
                 </svg>
               </button>
@@ -220,6 +225,9 @@
           </div>
           <div class="contacts__map">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
               <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg" alt="Как нас найти">
@@ -235,7 +243,7 @@
       <div class="page-footer__inner container">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__logo">
           <svg class="page-footer__logo-icon" width="101.615" height="34.056">
-            <use xlink:href="img/sprite.svg#footer-logo">
+            <use xlink:href="img/sprite.svg#sprite-logo-footer">
             </use>
           </svg>
         </a>
@@ -244,7 +252,7 @@
             <li class="social__item">
               <a href="https://www.instagram.com/htmlacademy" class="social__link social__link--instagram" aria-label="Мы в Инстаграме">
                 <svg width="21.769" height="21.334">
-                  <use xlink:href="img/sprite.svg#social-insta">
+                  <use xlink:href="img/sprite.svg#sprite-icon-insta">
                   </use>
                 </svg>
               </a>
@@ -252,7 +260,7 @@
             <li class="social__item">
               <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--facebook" aria-label="Мы в Фейсбуке">
                 <svg width="14.962px" height="27.718px">
-                  <use xlink:href="img/sprite.svg#social-facebook">
+                  <use xlink:href="img/sprite.svg#sprite-icon-fb">
                   </use>
                 </svg>
               </a>
@@ -260,7 +268,7 @@
             <li class="social__item">
               <a href="https://www.twitter.com/htmlacademy" class="social__link social__link--twitter" aria-label="Мы в Твиттере">
                 <svg width="23.494px" height="20.168px">
-                  <use xlink:href="img/sprite.svg#social-twitter">
+                  <use xlink:href="img/sprite.svg#sprite-icon-twitter">
                   </use>
                 </svg>
               </a>
@@ -271,7 +279,7 @@
           <b class="copyright__text">Разработано</b>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link" aria-label="HTML Academy">
             <svg width="35" height="35">
-              <use xlink:href="img/sprite.svg#copyright-logo">
+              <use xlink:href="img/sprite.svg#sprite-htmlacademy">
               </use>
             </svg>
           </a>
@@ -295,48 +303,6 @@
       </div>
       <div class="modal__overlay"></div>
     </section>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
-    <script>
-      var link = document.querySelector('.promo__btn--link');
-      var pageBody = document.body;
-      var pageHtml = document.querySelector('html');
-      var modal = document.querySelector('.modal');
-      var overlay = document.querySelector(".modal__overlay");
-
-      link.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        modal.classList.add("modal-show");
-        modal.classList.add("modal__overlay");
-        pageBody.classList.add("modal-open");
-        pageHtml.classList.add("modal-open");
-      });
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-        if (modal.classList.contains("modal-show")) {
-          modal.classList.remove("modal-show");
-          modal.classList.remove("modal__overlay");
-          pageBody.classList.remove("modal-open");
-          pageHtml.classList.remove("modal-open");
-        }
-      }
-    });
-    </script>
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 .page-footer {
-  background-color: $color-background-darken;
   width: 100%;
+  background-color: $color-background-darken;
 }
 
 .page-footer__inner {
@@ -24,6 +24,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+    width: 26%;
   }
 }
 

@@ -74,9 +74,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 0 50px;
     display: flex;
     align-items: baseline;
+    padding: 0 50px;
 
     &--color {
       padding-bottom: 29px;
@@ -105,10 +105,10 @@
   @include reset;
   @include title (17px, 16px);
   position: relative;
+  margin-bottom: 16px;
   text-align: left;
   text-transform: uppercase;
   color: $color-primary;
-  margin-bottom: 16px;
 
   &::after {
     content: "";
@@ -200,7 +200,7 @@
   position: absolute;
   right: 38px;
   bottom: 24px;
-  opacity: 0.3;
+  fill: $input-active;
 
   &--mail {
     bottom: 14px;
@@ -413,9 +413,9 @@
 .form-group__fill {
   @include reset;
   @include text (14px, 16px);
+  padding: 7px 32px;
   color: $color-gray;
   text-align: left;
-  padding: 7px 32px;
 
   @media (min-width: $tablet-width) {
     @include text (17px, 30px);
@@ -425,9 +425,9 @@
 
 .form-group__add {
   @include text (14px, 16px);
-  color: $color-gray;
   max-width: 700px;
   margin: auto;
+  color: $color-gray;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -444,12 +444,12 @@
 .form-group__btn {
   width: 260px;
   margin: 0 auto;
+  margin-bottom: 58px;
+  margin-top: 26px;
   background-color: $color-background-lighten;
   color: $color-gray;
   border: 2px solid $color-gray;
   cursor: pointer;
-  margin-bottom: 58px;
-  margin-top: 26px;
 
   @media (min-width: $tablet-width) {
     width: 230px;

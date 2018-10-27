@@ -7,11 +7,13 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <script src="./js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
     <script>
       document.createElement( "picture" );
     </script>
-    <script src="picturefill.min.js" async></script>
+    <script src="./js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -130,7 +132,7 @@
               <p class="form-group__title form-group__title--contacts">Тел</p>
               <input class="form-group__field form-group__field--gray" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"   name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
               <svg class="form-group__icon form-group__icon--contacts" width="25" height="25">
-                <use xlink:href="img/sprite.svg#form-icon-phone">
+                <use xlink:href="img/sprite.svg#sprite-icon-phone">
                 </use>
               </svg>
             </div>
@@ -140,7 +142,7 @@
               <p class="form-group__title">E-mail</p>
               <input class="form-group__field form-group__field--gray" type="email" placeholder="Ваш Email"   name="email" required>
               <svg class="form-group__icon form-group__icon--mail" width="32" height="32">
-                <use xlink:href="img/sprite.svg#form-icon-mail">
+                <use xlink:href="img/sprite.svg#sprite-icon-mail">
                 </use>
               </svg>
             </div>
@@ -162,7 +164,7 @@
       <div class="page-footer__inner container">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__logo">
           <svg class="page-footer__logo-icon" width="101.615" height="34.056">
-            <use xlink:href="img/sprite.svg#footer-logo">
+            <use xlink:href="img/sprite.svg#sprite-logo-footer">
             </use>
           </svg>
         </a>
@@ -171,7 +173,7 @@
             <li class="social__item">
               <a href="https://www.instagram.com/htmlacademy" class="social__link social__link--instagram" aria-label="Мы вИнстаграме">
                 <svg width="21.769" height="21.334">
-                  <use xlink:href="img/sprite.svg#social-insta">
+                  <use xlink:href="img/sprite.svg#sprite-icon-insta">
                   </use>
                 </svg>
               </a>
@@ -179,7 +181,7 @@
             <li class="social__item">
               <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--facebook" aria-label="Мы вФейсбуке">
                 <svg width="14.962px" height="27.718px">
-                  <use xlink:href="img/sprite.svg#social-facebook">
+                  <use xlink:href="img/sprite.svg#sprite-icon-fb">
                   </use>
                 </svg>
               </a>
@@ -187,7 +189,7 @@
             <li class="social__item">
               <a href="https://www.twitter.com/htmlacademy" class="social__link social__link--twitter" aria-label="Мы вТвиттере">
                 <svg width="23.494px" height="20.168px">
-                  <use xlink:href="img/sprite.svg#social-twitter">
+                  <use xlink:href="img/sprite.svg#sprite-icon-twitter">
                   </use>
                 </svg>
               </a>
@@ -198,28 +200,13 @@
           <b class="copyright__text">Разработано</b>
           <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link" aria-label="HTML Academy">
             <svg width="35" height="35">
-              <use xlink:href="img/sprite.svg#copyright-logo">
+              <use xlink:href="img/sprite.svg#sprite-htmlacademy">
               </use>
             </svg>
           </a>
         </div>
       </div>
       </footer>
-      <script>
-          var navMain = document.querySelector('.main-nav');
-          var navToggle = document.querySelector('.main-nav__toggle');
-
-          navMain.classList.remove('main-nav--nojs');
-
-          navToggle.addEventListener('click', function() {
-            if (navMain.classList.contains('main-nav--closed')) {
-              navMain.classList.remove('main-nav--closed');
-              navMain.classList.add('main-nav--opened');
-            } else {
-              navMain.classList.add('main-nav--closed');
-              navMain.classList.remove('main-nav--opened');
-            }
-          });
-        </script>
+      <script src="js/app.js"></script>
   </body>
 </html>

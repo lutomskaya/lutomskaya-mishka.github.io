@@ -4,10 +4,10 @@
 }
 
 .catalog__intro {
-  min-height: 179px;
   position: relative;
-  background-color: $color-background-darken;
+  min-height: 179px;
   margin-bottom: 30px;
+  background-color: $color-background-darken;
 
   @media (min-width: $tablet-width) {
     margin-top: -39px;

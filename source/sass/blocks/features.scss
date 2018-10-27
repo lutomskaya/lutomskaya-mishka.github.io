@@ -34,8 +34,8 @@
 
   @media (min-width: $desktop-width) {
     @include title (53px, 57px);
-    text-align: left;
     padding-left: 168px;
+    text-align: left;
   }
 }
 
