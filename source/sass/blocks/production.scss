@@ -1,17 +1,15 @@
 .production {
-  @include center;
-  min-width: 320px;
-  width: 100%;
-  box-sizing: border-box;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 .production__inner {
   @include reset;
   display: flex;
   flex-wrap: wrap;
-
-  border: 1px solid $gray--lighten;
+  margin: 0 30px;
   margin-bottom: 60px;
+  border: 1px solid $gray--lighten;
 
   &:hover {
     box-shadow: 0 4px 10px 0 $gray--lighten;
@@ -20,83 +18,73 @@
   &:active {
     box-shadow: 0 4px 4px 0 $gray--lighten;
   }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-around;
+    min-height: 455px;
+    padding-left: 700px;
+    margin-bottom: 105px;
+  }
 }
 
 .production__process {
   @include reset;
   @include title (17px, 24px);
+  position: relative;
+  padding: 26px 0;
+  padding-left: 90px;
   text-align: left;
-  padding: 30px;
-  padding-left: 120px;
+
+  &::after {
+    content: url("../img/icon-video.svg");
+    position: absolute;
+    top: 30px;
+    left: 34px;
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include title (20px, 24px);
+    padding-left: 106px;
+    padding-top: 34px;
+
+    &::after {
+      left: 43px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    padding-top: 95px;
+    padding-left: 0;
+    padding-bottom: 0;
+
+    &::after {
+      left: 1px;
+      top: 41px;
+    }
+  }
 }
 
 .production__video {
-  @include center;
-}
+  position: relative;
+  text-align: center;
 
-.production__video img {
-  width: 100%;
-  height: auto;
-}
-
-.production__description {
-  @include reset;
-  @include text (13px, 24px);
-  color: $color-gray;
-  text-align: left;
-  padding: 30px 60px;
-}
-
-.production__btn {
-  margin-bottom: 30px;
-  width: 190px;
-}
-
-@media (min-width: $tablet-width) {
-  .production {
-    padding: 0 50px;
-    margin-bottom: 65px;
-  }
-
-  .production__process {
-    @include title (20px, 24px);
-    text-align: left;
-    padding: 30px;
-    padding-left: 120px;
-  }
-
-  .production__video {
+  @media (min-width: $tablet-width) {
     order: -1;
     width: 100%;
     min-height: 455px;
   }
 
-  .production__description {
-    @include text (15px, 24px);
-    padding: 30px 52px;
-  }
-
-  .production__btn {
-    width: 584px;
-    margin-bottom: 50px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .production {
-    max-width: 1150px;
-  }
-
-  .production__inner {
-    position: relative;
-    min-height: 455px;
-    padding-left: 700px;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin-bottom: 105px;
-  }
-
-  .production__video {
+  @media (min-width: $desktop-width) {
     position: absolute;
     top: 0;
     left: 0;
@@ -104,22 +92,67 @@
     min-height: 455px;
     padding: 0;
   }
+}
 
-  .production__process {
-    width: 230px;
-    padding-top: 95px;
-    padding-left: 0;
-    padding-bottom: 0;
+.production__play-btn {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  width: 100px;
+  height: 76px;
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
   }
 
-
-  .production__description {
-    width: 230px;
-    padding-top: 10px;
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
   }
 
-  .production__btn {
+  @media (min-width: $tablet-width) {
+    top: 50%;
+  }
+}
+
+.production__description {
+  @include reset;
+  @include text (13px, 24px);
+  padding: 22px 33px;
+  color: $color-gray;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    @include text (15px, 28px);
+    padding: 8px 36px 42px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
     width: 230px;
-    margin-bottom: 50px;
+    padding-top: 19px;
+  }
+}
+
+.production__btn {
+  margin: 0 auto;
+  width: 168px;
+  padding: 14px 11px;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    width: 559px;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 203px;
+    margin-bottom: 41px;
   }
 }

@@ -1,9 +1,9 @@
 .btn {
   @include reset;
-  @include center;
   @include title (17px, 20px);
   display: block;
-  padding: 10px;
+  padding: 12px;
+  text-align: center;
   text-transform: uppercase;
   color: $color-gray;
   border: 2px solid $color-gray;

@@ -1,39 +1,77 @@
 .promo {
-  @include center;
   position: relative;
-  min-width: 320px;
-  width: 100%;
-  padding: 0 20px;
+  padding-bottom: 35px;
   text-align: left;
-  box-sizing: border-box;
-  padding-bottom: 46px;
-  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 67px;
+  }
 }
 
-.promo::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 14px;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: repeat-x;
+.promo__inner {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    min-height: 720px;
+    max-width: 1150px;
+  }
 }
 
 .promo__header {
-  padding-left: 11px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 96px;
+    left: 0;
+    z-index: 2;
+  }
 }
 
 .promo__content {
-  padding-left: 11px;
+  @media (min-width: $tablet-width) {
+    width: 48%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 213px;
+    padding-left: 174px;
+    width: 33%;
+  }
 }
 
 .promo__title {
   @include reset;
   @include title (25px, 30px);
+
+  @media (min-width: $tablet-width) {
+    @include title(43px, 50px);
+    width: 85%;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include title(53px, 57px);
+    padding-top: 12px;
+    padding-left: 15px;
+  }
 }
 
 .promo__label {
@@ -42,128 +80,83 @@
   padding-top: 5px;
   color: $color-primary;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include title(17px, 17px);
+    width: 13%;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: -1;
+    width: 10%;
+    padding-top: 23px;
+    padding-left: 30px;
+  }
 }
 
 .promo__text {
   @include reset;
   @include text(15px, 24px);
-  padding: 23px 10px 16px 0;
   color: $color-gray;
+
+  @media (min-width: $tablet-width) {
+    @include text(17px, 30px);
+  }
 }
 
 .promo__image {
-  @include center;
   overflow: hidden;
   padding-top: 30px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 107px;
+    left: 50%;
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 56px;
+  }
 }
 
 .promo__price {
+  @include reset;
   @include title(17px, 24px);
-  @include center;
+  padding-bottom: 27px;
+  text-align: center;
   color: $color-gray;
-  padding-top: 17px;
+
+  @media (min-width: $tablet-width) {
+    @include title(20px, 24px);
+    padding-bottom: 32px;
+  }
 }
 
 .promo__btn {
   padding: 14px 10px;
-  margin-top: 25px;
+  margin: 0 auto;
   width: 236px;
-}
 
-@media (min-width: $tablet-width) {
-  .promo {
-    padding: 0 50px;
-  }
-
-  .promo__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .promo__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 65px;
-    width: 100%;
-  }
-
-  .promo__content {
-    width: 50%;
-  }
-
-  .promo__title {
-    @include title(43px, 50px);
-    width: 90%;
-  }
-
-  .promo__label {
-    @include title(17px, 17px);
-    width: 10%;
-    text-align: center;
-    padding-right: 20px;
-  }
-
-  .promo__text {
-    @include text(17px, 30px);
-  }
-
-  .promo__image {
-    margin: 0;
-    padding-top: 30px;
-  }
-
-  .promo__footer {
-    position: absolute;
-    bottom: 55px;
-    left: 0;
-  }
-
-  .promo__price {
-    @include title(20px, 24px);
-    padding: 0 138px;
-  }
-
-  .promo__btn {
-    width: 290px;
+  @media (min-width: $tablet-width) {
+    width: 267px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .promo {
-    max-width: 1150px;
+.promo__footer {
+  padding-top: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
   }
 
-  .promo__inner {
-    position: relative;
-    min-height: 720px;
-  }
-
-  .promo__header {
-    position: relative;
-    z-index: 1;
-  }
-
-  .promo__image {
-    position: absolute;
-    right: 0;
-  }
-
-  .promo__title {
-    @include title(53px, 57px);
-  }
-
-  .promo__label {
-    order: -1;
-  }
-
-  .promo__content {
-    padding-left: 125px;
-    width: 60%;
-  }
-
-  .promo__footer {
-    left: 70px;
+  @media (min-width: $desktop-width) {
+    margin-left: 173px;
+    margin-top: 56px;
   }
 }

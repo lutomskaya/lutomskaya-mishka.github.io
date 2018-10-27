@@ -1,37 +1,139 @@
 .form-group {
   @include reset;
   border: none;
-  box-sizing: border-box;
+
+  &--gray {
+    margin-top: 8px;
+    margin-bottom: 18px;
+  }
+
+  &--contacts {
+    margin: 0;
+    padding-top: 8px;
+  }
+
+  &--mail {
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--gray {
+      margin-bottom: 37px;
+      margin-top: 28px;
+      padding-top: 17px;
+      width: 100%;
+      background-color: $color-background-darken;
+    }
+
+    &--contacts {
+      margin: 0;
+      margin-top: 57px;
+      padding-top: 58px;
+      padding-bottom: 0;
+    }
+
+    &--mail {
+      padding-top: 27px;
+      padding-bottom: 44px;
+      margin-bottom: 40px;
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+
+    &--contacts {
+      padding-top: 30px;
+    }
+
+    &--mail {
+      margin-bottom: 33px;
+    }
+  }
 }
 
 .form-group__inner {
-  padding: 0 20px;
+  padding: 0 30px;
   margin: auto;
   max-width: 1150px;
+
+  &--contacts {
+    position: relative;
+    padding-top: 13px;
+  }
+
+  &--mail {
+    position: relative;
+  }
+
+  &--color {
+    padding-top: 29px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: baseline;
+    padding: 0 50px;
+
+    &--color {
+      padding-bottom: 29px;
+      padding-top: 33px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--mail {
+      padding-bottom: 41px;
+    }
+  }
 }
 
 .form-group__wrapper {
   width: 100%;
+  margin-bottom: 12px;
+  margin-top: 13px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .form-group__title {
   @include reset;
   @include title (17px, 16px);
   position: relative;
+  margin-bottom: 16px;
   text-align: left;
   text-transform: uppercase;
   color: $color-primary;
-  margin-bottom: 30px;
-}
 
-.form-group__title::after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  right: 0;
-  width: 75%;
-  height: 1px;
-  background-color: $color-primary;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 75%;
+    height: 1px;
+    background-color: $color-primary;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 25%;
+    padding-left: 2px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 10.5%;
+    padding-left: 62px;
+    padding-top: 35px;
+  }
 }
 
 .form-group__item {
@@ -40,29 +142,130 @@
   display: block;
   text-align: left;
   width: 100%;
-  padding: 20px 0 0 70px;
-  margin-bottom: 20px;
+  padding: 18px 0 0 65px;
+  margin-bottom: 7px;
+
+  &--gray {
+    padding: 18px 0 18px 65px;
+  }
 
   &--text {
     padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include title (19px, 19px);
+    padding: 18px 0 31px 81px;
+
+    &--text {
+      padding: 18px 0 8px;
+      width: 35%;
+    }
+
+    &--gray {
+      width: 33%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--text {
+      width: 16%;
+    }
+
+    &--gray {
+      width: 23%;
+    }
   }
 }
 
 .form-group__option {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
-  margin-bottom: 30px;
+  justify-content: space-between;
+
+  &--text {
+    margin-bottom: -19px;
+    padding-left: 4px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    padding-left: 0;
+  }
+}
+
+.form-group__icon {
+  position: absolute;
+  right: 38px;
+  bottom: 24px;
+  fill: $input-active;
+
+  &--mail {
+    bottom: 14px;
+    right: 32px;
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 230px;
+
+    &--mail {
+      bottom: 58px;
+    }
+  }
 }
 
 .form-group__field {
   @include text (17px, 18px);
   width: 100%;
-  padding: 20px 0;
+  padding: 8px 0 15px;
   color: $color-gray;
+
+  &--gray {
+    position: relative;
+  }
+
+  &--text {
+    @include text (19px, 18px);
+    border: 2px solid $color-black;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 8px;
+    padding: 15px;
+    padding-bottom: 34px;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+
+    &:active {
+      border: 1px solid $color-primary;
+    }
+  }
 
   &::placeholder {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--gray {
+      background-color: $color-background-darken;
+    }
+
+    &--text {
+      width: 75%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--text {
+      width: 67%;
+    }
   }
 }
 
@@ -80,16 +283,29 @@
   height: 35px;
   border-radius: 50%;
   border: 2px solid $color-gray;
+
+  @media (min-width: $tablet-width) {
+    top: 1px;
+    left: 1px;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .form-group__option input[type="checkbox"] + label::before {
   position: absolute;
   content: "";
-  bottom: -9px;
-  left: 0;
+  bottom: 9px;
+  left: 1px;
   width: 35px;
   height: 35px;
   border: 2px solid $color-gray;
+
+  @media (min-width: $tablet-width) {
+    top: 2px;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 
@@ -112,6 +328,13 @@
   height: 16px;
   border-radius: 50%;
   background-color: $color-primary;
+
+  @media (min-width: $tablet-width) {
+    top: 18px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .form-group__option input[type="checkbox"]:checked + label::after {
@@ -124,6 +347,13 @@
   transform: rotate(45deg);
   border-bottom: 2px solid $color-black;
   border-right: 2px solid $color-black;
+
+  @media (min-width: $tablet-width) {
+    top: 9px;
+    left: 19px;
+    width: 17px;
+    height: 28px;
+  }
 }
 
 .form-group__option input[type="text"] {
@@ -131,6 +361,10 @@
   border: none;
   border-bottom: 2px solid $color-black;
   outline: none;
+
+  @media (min-width: $desktop-width) {
+    width: 72%;
+  }
 }
 
 .form-group__option input[type="text"]:hover {
@@ -147,7 +381,23 @@
   border: none;
   border-bottom: 2px solid $color-black;
   outline: none;
-  margin-bottom: 30px;
+  margin-bottom: 6px;
+  width: 100%;
+  padding: 7px 19px 16px;
+
+  &:hover ~ .form-group__icon,
+  &:focus ~ .form-group__icon,
+  &:active ~ .form-group__icon {
+    fill: $color-primary;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 75%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 67%;
+  }
 }
 
 .form-group__field[type="tel"]:hover,
@@ -160,105 +410,54 @@
   border-bottom: 1px solid $color-primary;
 }
 
-.form-group__field--text {
-  border: 2px solid $color-black;
-  box-sizing: border-box;
-  outline: none;
-  padding: 20px;
-
-  &:hover {
-    border-color: $color-primary;
-  }
-
-  &:active {
-    border: 1px solid $color-primary;
-  }
-}
-
 .form-group__fill {
   @include reset;
   @include text (14px, 16px);
+  padding: 7px 32px;
   color: $color-gray;
   text-align: left;
-  padding: 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    @include text (17px, 30px);
+    padding: 0;
+  }
 }
 
 .form-group__add {
   @include text (14px, 16px);
-  color: $color-gray;
-  max-width: 1150px;
+  max-width: 700px;
   margin: auto;
-}
-
-.form-group__btn {
-  width: 280px;
-  background-color: $color-background-lighten;
   color: $color-gray;
-  border: 2px solid $color-gray;
-  cursor: pointer;
-  margin-bottom: 55px;
-}
 
-@media (min-width: $tablet-width) {
-  .form-group__inner {
-    padding: 0 50px;
-    display: flex;
-    align-items: baseline;
-  }
-
-  .form-group--gray {
-    width: 100%;
-    background-color: $color-background-darken;
-  }
-
-  .form-group__item {
-    @include title (19px, 19px);
-
-    &--gray {
-      width: 36%;
-    }
-  }
-
-  .form-group__title {
-    width: 25%;
-
-    &::after {
-      display: none;
-    }
-  }
-
-  .form-group__option {
-    display: flex;
-    flex-wrap: wrap;
-    width: 75%;
-  }
-
-  .form-group__field--gray {
-    background-color: $color-background-darken;
-  }
-
-  .form-group__add {
+  @media (min-width: $tablet-width) {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     padding: 0 50px;
   }
 
-  .form-group__btn {
+  @media (min-width: $desktop-width) {
+    width: 62%;
+  }
+}
+
+.form-group__btn {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 58px;
+  margin-top: 26px;
+  background-color: $color-background-lighten;
+  color: $color-gray;
+  border: 2px solid $color-gray;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
     width: 230px;
     order: -1;
     margin: 55px 0;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .form-group {
-    padding: 0;
-    padding-top: 30px;
-    padding-left: 60px;
-  }
-
-  .form-group__add {
-    padding-left: 200px;
+  @media (min-width: $desktop-width) {
+    margin: 51px 0;
   }
 }

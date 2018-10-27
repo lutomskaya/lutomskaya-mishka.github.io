@@ -1,21 +1,125 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1150px;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+main {
+  display: block;
+}
+
+.zigzag-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 7px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: 8px 0;
+    background-size: 320px 7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      left: 0;
+      height: 17px;
+      background-position: 19px 0;
+      background-size: 768px 17px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: -22px;
+      left: 0;
+      width: 1050px;
+      height: 22px;
+      background-position: 24px 0;
+      background-size: 1050px  22px;
+      transform: translateX(5%);
+    }
+  }
+}
+
+.zigzag-fill {
+  position: static;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -5px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-position-x: center;
+      background-size: auto 22.8px;/*23*/
+      z-index: 5;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      bottom: -10px;
+      background-size: auto 34px;
+    }
+
+    &--strech::after {
+      bottom: -11px;
+      height: 37px;
+      background-size: 1250px;
+    }
+  }
 }

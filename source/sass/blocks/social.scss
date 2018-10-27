@@ -1,31 +1,34 @@
+.social {
+  @media (min-width: $tablet-width) {
+    width: 40%;
+  }
+}
+
 .social__list {
   @include reset;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  padding: 24px 69px;
+  padding: 23px 39px;
   border-bottom: 1px solid $gray--lighten;
+
+  @media (min-width: $tablet-width) {
+    width: 178px;
+    padding: 0;
+    margin: auto;
+    border: none;
+  }
 }
 
 .social__link {
+  fill: $color-black;
+
   &:hover {
-    path {
-      fill: $color-contacts-field;
-    }
+    fill: $color-contacts-field;
   }
 
   &:active {
-    path {
-      fill-opacity: 0.3;
-    }
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .social__list {
-    width: 150px;
-    margin: auto;
-    border: none;
+    fill-opacity: 0.3;
   }
 }

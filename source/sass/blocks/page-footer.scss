@@ -1,45 +1,39 @@
 .page-footer {
-  background-color: $color-background-darken;
   width: 100%;
+  background-color: $color-background-darken;
 }
 
 .page-footer__inner {
-  @include container (320px);
-  margin-top: 40px;
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1150px;
+  }
 }
 
 .page-footer__logo {
   display: none;
-}
 
-@media (min-width: $tablet-width) {
-  .page-footer__inner {
-    @include container (668px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-  }
-
-  .page-footer__logo {
+  @media (min-width: $tablet-width) {
     display: block;
-
-    &:hover {
-      path {
-        fill: $color-contacts-field;
-      }
-    }
-
-    &:active {
-      path {
-        fill-opacity: 0.3;
-      }
-    }
+    width: 26%;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .page-footer__inner {
-    @include container (1150px);
+.page-footer__logo-icon {
+  &:hover {
+    fill: $color-contacts-field;
+  }
+
+  &:active {
+    fill-opacity: 0.3;
   }
 }

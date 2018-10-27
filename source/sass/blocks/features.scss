@@ -1,80 +1,74 @@
 .features {
-  @include center;
-  min-width: 320px;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 43px;
+  }
 }
 
 .features__inner {
   text-align: left;
-  padding: 0 10px;
+  padding-top: 34px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 62px;
+  }
 }
 
 .features__title {
   @include reset;
   @include title (25px, 30px);
-}
 
-.features__list {
-  @include reset;
-  padding-top: 30px;
-}
-
-.features__item {
-  @include title (17px, 20px);
-  width: 100%;
-  padding: 55px 0 29px 0;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  box-sizing: border-box;
-
-  &--eco {
-    background-image: url("../img/icon-feature-flower.svg");
-  }
-
-  &--style {
-    background-image: url("../img/icon-feature-money.svg");
-  }
-
-  &--like {
-    background-image: url("../img/icon-feature-heart.svg");
-  }
-
-  &--manually {
-    background-image: url("../img/icon-feature-ball.svg");
-  }
-
-  &--manufacturer {
-    background-image: url("../img/icon-feature-rocket.svg");
-  }
-
-  &--delivery {
-    background-image: url("../img/icon-feature-gift.svg");
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .features {
-    padding: 0 50px;
-  }
-
-  .features__title {
+  @media (min-width: $tablet-width) {
     @include title (43px, 50px);
     text-align: left;
   }
 
-  .features__list {
+  @media (min-width: $desktop-width) {
+    @include title (53px, 57px);
+    padding-left: 168px;
+    text-align: left;
+  }
+}
+
+.features__list {
+  @include reset;
+  padding-top: 32px;
+
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   }
 
-  .features__item {
+  @media (min-width: $tablet-width) {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.features__item {
+  @include title (17px, 20px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &--style {
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
     @include title (20px, 22px);
     width: 50%;
-    padding: 60px 0;
+    padding: 14px 0;
 
     &--eco,
     &--manually {
@@ -86,14 +80,62 @@
       order: -1;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0;
+  }
 }
 
-@media (min-width: $desktop-width) {
-  .features {
-    max-width: 1150px;
+.features__icon {
+  padding-left: 5px;
+
+  &--style {
+    padding-left: 0;
+    padding-bottom: 5px;
   }
 
-  .features__inner {
-    @include container (700px);
+  &--like {
+    padding-bottom: 2px;
   }
+
+  &--manufacturer {
+    padding-left: 0;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--eco {
+      padding-left: 9px;
+    }
+
+    &--manually {
+      padding-top: 4px;
+    }
+
+    &--manufacturer {
+      padding-bottom: 11px;
+    }
+
+    &--style {
+      padding-bottom: 3px;
+      padding-top: 5px;
+      padding-left: 9px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--style {
+      padding-top: 0;
+      padding-left: 3px;
+    }
+
+    &--like {
+      padding-left: 11px;
+      padding-bottom: 4px;
+    }
+  }
+}
+
+.features__text {
+  padding: 18px 0 30px;
 }

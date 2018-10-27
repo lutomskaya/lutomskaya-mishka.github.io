@@ -1,75 +1,71 @@
 .form-main {
-  @include center;
   min-width: 320px;
   width: 100%;
   box-sizing: border-box;
 }
 
-.form-main__inner {
-  @include center;
-}
-
 .form-main__intro {
-  min-height: 250px;
   position: relative;
+  width: 100%;
+  min-height: 180px;
   background-color: $color-background-darken;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -42px;
+    min-height: 232px;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -43px;
+    min-height: 253px;
+    margin-bottom: 48px;
+  }
 }
 
 .form-main__description {
   max-width: 1150px;
   margin: auto;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .form-main__slogan {
   @include reset;
   @include text (13px, 24px);
-  color: $color-gray;
-  padding: 30px;
+  padding: 22px 3px 0 3px;
   text-align: left;
-}
+  color: $color-gray;
 
+  @media (min-width: $tablet-width) {
+    @include text (17px, 30px);
+    padding: 23px 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 176px 0 176px;
+  }
+}
 
 .form-main__title {
   @include reset;
   @include title (27px, 30px);
-  padding-top: 100px;
-}
+  padding-top: 74px;
+  text-align: center;
 
-@media (min-width: $tablet-width) {
-  .form-main__title {
+  @media (min-width: $tablet-width) {
     @include title (43px, 50px);
+    padding-top: 94px;
   }
 
-  .form-main__intro {
-    margin-top: -34px;
-  }
-
-  .form-main__intro::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 11px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: repeat-x;
-  }
-
-  .form-main__slogan {
-    @include text (17px, 30px);
-    margin-top: 80px;
-    padding: 30px 50px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .form-main__slogan {
-    padding: 0 175px;
-  }
-
-  .form-main__intro {
-    margin-top: -59px;
+  @media (min-width: $desktop-width) {
+    @include title (53px, 57px);
   }
 }
