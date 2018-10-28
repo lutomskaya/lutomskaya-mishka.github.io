@@ -14,10 +14,14 @@
   border-bottom: 1px solid $gray--lighten;
 
   @media (min-width: $tablet-width) {
-    width: 177px;
+    width: 185px;
     padding: 0;
     margin: auto;
     border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 7px;
   }
 }
 

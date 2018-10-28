@@ -22,7 +22,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 66px;
+    padding-top: 68px;
     padding-bottom: 57px;
   }
 }
@@ -57,7 +57,7 @@
     position: relative;
     padding-right: 100px;
     padding-left: 46px;
-    padding-top: 75px;
+    padding-top: 79px;
 
     &::before {
       content: url("../img/icon-flag.svg");
@@ -148,7 +148,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 70px;
+    top: 74px;
     right: 51px;
   }
 }

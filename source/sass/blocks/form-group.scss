@@ -270,11 +270,6 @@
   }
 }
 
-.form-group__option input[type="checkbox"],
-.form-group__option input[type="radio"] {
-  display: none;
-}
-
 .form-group__option input[type="radio"] + label::before {
   position: absolute;
   content: "";
