@@ -129,8 +129,8 @@
           </fieldset>
           <fieldset class="form-group form-group--gray form-group--contacts">
             <div class="form-group__inner form-group__inner--contacts container">
-              <p class="form-group__title form-group__title--contacts">Тел</p>
-              <input class="form-group__field form-group__field--gray" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"   name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+              <label class="form-group__title form-group__title--contacts" for="phone-field">Тел</label>
+              <input class="form-group__field form-group__field--gray" type="tel" id="phone-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*"   name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
               <svg class="form-group__icon form-group__icon--contacts" width="25" height="25">
                 <use xlink:href="img/sprite.svg#sprite-icon-phone">
                 </use>
@@ -139,8 +139,8 @@
           </fieldset>
           <fieldset class="form-group form-group--gray form-group--mail">
             <div class="form-group__inner form-group__inner--mail container">
-              <p class="form-group__title">E-mail</p>
-              <input class="form-group__field form-group__field--gray" type="email" placeholder="Ваш Email"   name="email" required>
+              <label class="form-group__title" for="email-field">E-mail</label>
+              <input class="form-group__field form-group__field--gray" type="email" id="email-field" placeholder="Ваш Email"   name="email" required>
               <svg class="form-group__icon form-group__icon--mail" width="32" height="32">
                 <use xlink:href="img/sprite.svg#sprite-icon-mail">
                 </use>
@@ -149,8 +149,8 @@
           </fieldset>
           <fieldset class="form-group">
             <div class="form-group__inner container">
-              <p class="form-group__title">Доп</p>
-              <textarea class="form-group__field form-group__field--text" name="text"   rows="5" cols="30" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <label class="form-group__title" for="other-field">Доп</label>
+              <textarea class="form-group__field form-group__field--text" id="other-field" name="text"   rows="5" cols="30" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
           <div class="form-group__add">

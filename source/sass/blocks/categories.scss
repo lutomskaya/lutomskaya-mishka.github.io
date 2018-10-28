@@ -70,12 +70,12 @@
 
 .categories__list {
   @include reset;
-  margin-top: 122px;
+  margin-top: 119px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     width: 100%;
-    margin-top: 375px;
+    margin-top: 374px;
   }
 
   @media (min-width: $desktop-width) {
@@ -94,7 +94,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 28px;
+  padding: 19px 29px 23px;
   color: $color-background-lighten;
   text-align: left;
   transition: all 0.2s linear;
@@ -114,7 +114,7 @@
 
   @media (min-width: $tablet-width) {
     @include title (20px, 30px);
-    padding: 31px 35px 37px;
+    padding: 27px 35px 37px;
   }
 }
 

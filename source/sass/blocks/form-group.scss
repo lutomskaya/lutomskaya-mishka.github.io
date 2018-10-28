@@ -239,12 +239,13 @@
     padding: 15px;
     padding-bottom: 34px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: $color-primary;
     }
 
     &:active {
-      border: 1px solid $color-primary;
+      border: 2px solid $color-primary;
     }
   }
 
@@ -310,7 +311,9 @@
 
 
 .form-group__option input[type="radio"] + label:hover::before,
-.form-group__option input[type="checkbox"] + label:hover::before {
+.form-group__option input[type="checkbox"] + label:hover::before,
+.form-group__option input[type="radio"] + label:focus::before,
+.form-group__option input[type="checkbox"] + label:focus::before {
   border-color: $color-primary;
 }
 
@@ -361,18 +364,20 @@
   border: none;
   border-bottom: 2px solid $color-black;
   outline: none;
+  font-family: inherit;
 
   @media (min-width: $desktop-width) {
     width: 72%;
   }
 }
 
-.form-group__option input[type="text"]:hover {
+.form-group__option input[type="text"]:hover,
+.form-group__option input[type="text"]:focus {
   border-color: $color-primary;
 }
 
 .form-group__option input[type="text"]:active {
-  border-bottom: 1px solid $color-primary;
+  border-bottom: 2px solid $color-primary;
 }
 
 .form-group__field[type="tel"],
@@ -401,13 +406,15 @@
 }
 
 .form-group__field[type="tel"]:hover,
-.form-group__field[type="email"]:hover {
+.form-group__field[type="email"]:hover,
+.form-group__field[type="tel"]:focus,
+.form-group__field[type="email"]:focus {
   border-color: $color-primary;
 }
 
 .form-group__field[type="tel"]:active,
 .form-group__field[type="email"]:active {
-  border-bottom: 1px solid $color-primary;
+  border-bottom: 2px solid $color-primary;
 }
 
 .form-group__fill {

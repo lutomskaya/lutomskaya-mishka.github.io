@@ -162,7 +162,7 @@
     &--basket {
       @include title (17px, 24px);
       text-align: right;
-      padding-top: 8px;
+      padding-top: 4px;
     }
   }
 
@@ -232,15 +232,21 @@
 
 .site-list__link--logo {
   padding-left: 0;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 20px;
+  padding-bottom: 17px;
   text-align: center;
 
   &:hover {
     opacity: 0.6;
   }
 
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
+    padding-top: 12px;
+    padding-bottom: 13px;
     text-align: left;
   }
 
