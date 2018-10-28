@@ -185,6 +185,10 @@
   margin-right: 20px;
   fill: rgba($color-black, 0.3);
 
+  &--basket {
+    overflow: hidden;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: 27px;
     margin-right: 28px;
