@@ -50,10 +50,6 @@
 .modal-form {
   width: 100%;
   margin-top: 30px;
-
-  input {
-    display: none;
-  }
 }
 
 .modal-form__item {
@@ -66,16 +62,16 @@
   &--active {
     margin-left: 0;
   }
-
-  &:hover,
-  &:focus,
-  &--active {
-    border: 2px solid $color-primary;
-  }
 }
 
-.modal-form__item input[type="radio"]:checked + label {
-  border: 1px solid $color-primary;
+.modal-form input[type="radio"] + label:hover,
+.modal-form input[type="radio"] + label:focus,
+.modal-form input[type="radio"] + label:active {
+  border: 2px solid $color-primary;
+}
+
+.modal-form input[type="radio"]:checked + label {
+  border: 2px solid $color-primary;
 }
 
 .modal-form__btn {

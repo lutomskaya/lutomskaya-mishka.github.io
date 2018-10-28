@@ -33,7 +33,7 @@
 .catalog__title {
   @include reset;
   @include title (27px, 30px);
-  padding-top: 73px;
+  padding: 73px 0 40px 0;
   text-align: center;
 
   @media (min-width: $tablet-width) {

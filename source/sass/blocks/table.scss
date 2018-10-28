@@ -22,14 +22,19 @@
 
 .table__field {
   padding: 10px 0;
+  width: 30%;
+
+  @media (min-width: $tablet-width) {
+    width: 27%;
+  }
 
   @media (min-width: $desktop-width) {
-    width: 27%;
+    width: 29%;
   }
 }
 
 .table__value {
-  padding-left: 15px;
+  padding-left: 17px;
 
   @media (min-width: $tablet-width) {
     padding-left: 0;

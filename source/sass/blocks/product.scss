@@ -4,6 +4,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -145,6 +146,8 @@
 }
 
 .product__buy {
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
     width: 53px;
   }

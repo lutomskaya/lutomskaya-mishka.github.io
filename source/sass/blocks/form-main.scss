@@ -57,7 +57,7 @@
 .form-main__title {
   @include reset;
   @include title (27px, 30px);
-  padding-top: 74px;
+  padding: 74px 0 40px 0;
   text-align: center;
 
   @media (min-width: $tablet-width) {
