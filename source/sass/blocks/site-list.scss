@@ -54,6 +54,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 0;
     border-bottom: none;
 
     &--catalog {
@@ -90,7 +91,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     width: 18%;
-    padding-top: 14px;
+    padding-top: 20px;
     text-align: left;
 
     &--sale {
@@ -177,6 +178,10 @@
       @include title (15px, 24px);
       padding-top: 2px;
     }
+
+    &--basket {
+      padding-top: 7px;
+    }
   }
 }
 
@@ -256,7 +261,7 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 41px;
-    padding-top: 16px;
+    padding-top: 6px;
     padding-bottom: 0;
   }
 }

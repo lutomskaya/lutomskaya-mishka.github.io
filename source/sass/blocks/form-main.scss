@@ -26,7 +26,7 @@
 .form-main__description {
   max-width: 1150px;
   margin: auto;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
@@ -40,7 +40,7 @@
 .form-main__slogan {
   @include reset;
   @include text (13px, 24px);
-  padding: 22px 3px 0 3px;
+  padding-top: 18px;
   text-align: left;
   color: $color-gray;
 
@@ -57,7 +57,7 @@
 .form-main__title {
   @include reset;
   @include title (27px, 30px);
-  padding: 74px 0 40px 0;
+  padding: 72px 0 40px 0;
   text-align: center;
 
   @media (min-width: $tablet-width) {

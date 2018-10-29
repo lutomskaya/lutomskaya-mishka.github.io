@@ -58,7 +58,7 @@
   @include reset;
   @include text (13px, 30px);
   padding-bottom: 19px;
-  padding-top: 4px;
+  padding-top: 5px;
   color: $color-gray;
 
   @media (min-width: $tablet-width) {
@@ -93,11 +93,11 @@
 }
 
 .product__description-header {
-  padding-top: 23px;
+  padding-top: 22px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 155px;
-    padding-top: 27px;
+    padding-top: 25px;
     border: none;
 
     &--basket-toys {

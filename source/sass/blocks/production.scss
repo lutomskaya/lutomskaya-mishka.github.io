@@ -38,7 +38,7 @@
   @include reset;
   @include title (17px, 24px);
   position: relative;
-  padding: 26px 0;
+  padding: 24px 0;
   padding-left: 90px;
   text-align: left;
 
@@ -125,7 +125,7 @@
 .production__description {
   @include reset;
   @include text (13px, 24px);
-  padding: 22px 33px;
+  padding: 23px 33px;
   color: $color-gray;
   text-align: left;
 
