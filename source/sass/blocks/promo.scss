@@ -153,10 +153,11 @@
     display: flex;
     flex-direction: column;
     margin-top: auto;
+    padding-top: 21px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 173px;
-    margin-top: 54px;
+    margin-left: 175px;
+    margin-top: 57px;
   }
 }

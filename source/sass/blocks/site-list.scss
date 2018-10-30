@@ -140,7 +140,7 @@
     padding-left: 33px;
   }
 
-  &:hover,
+  &:hover[href],
   &:focus {
     color: rgba($color-black, 0.3);
   }
@@ -172,6 +172,7 @@
 
     &--search {
       font-size: 0;
+      padding-top: 21px;
     }
 
     &--promo {
@@ -180,7 +181,7 @@
     }
 
     &--basket {
-      padding-top: 7px;
+      padding-top: 10px;
     }
   }
 }
@@ -194,6 +195,10 @@
     overflow: hidden;
   }
 
+  &--cart {
+    padding-top: 2px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: 27px;
     margin-right: 28px;
@@ -205,6 +210,10 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 32px;
+
+    &--cart {
+      padding-top: 4px;
+    }
   }
 }
 

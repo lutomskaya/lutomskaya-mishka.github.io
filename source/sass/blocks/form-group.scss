@@ -261,6 +261,7 @@
   }
 
   &::placeholder {
+    font-size: 17px;
     opacity: 0.3;
   }
 
@@ -361,8 +362,8 @@
 .form-group__option input[type="checkbox"]:checked + label::after {
   position: absolute;
   content: "";
-  top: 16px;
-  left: 16px;
+  top: 13px;
+  left: 15px;
   width: 10px;
   height: 20px;
   transform: rotate(45deg);
@@ -468,7 +469,7 @@
   width: 260px;
   margin: 0 auto;
   margin-bottom: 58px;
-  margin-top: 26px;
+  margin-top: 25px;
   background-color: $color-background-lighten;
   color: $color-gray;
   border: 2px solid $color-gray;

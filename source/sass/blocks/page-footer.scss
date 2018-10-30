@@ -11,11 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 50px;
+    padding: 47px 50px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1150px;
+    padding: 50px 50px;
   }
 }
 

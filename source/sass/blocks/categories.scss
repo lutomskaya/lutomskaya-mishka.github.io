@@ -54,7 +54,7 @@
 .categories__title {
   @include reset;
   @include title (27px, 30px);
-  padding: 73px 10px 0 10px;
+  padding: 71px 10px 0 10px;
   text-align: center;
 
   @media (min-width: $tablet-width) {

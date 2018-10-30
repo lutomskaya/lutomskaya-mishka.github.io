@@ -73,7 +73,7 @@
     @include title (53px, 57px);
     width: 100%;
     padding-left: 219px;
-    padding-top: 75px;
+    padding-top: 74px;
 
     &::before {
       top: 67px;
@@ -87,7 +87,7 @@
   padding: 25px 0 5px 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 49px;
+    padding-top: 46px;
   }
 
   @media (min-width: $desktop-width) {
