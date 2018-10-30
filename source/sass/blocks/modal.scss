@@ -64,14 +64,25 @@
   }
 }
 
-.modal-form input[type="radio"] + label:hover,
-.modal-form input[type="radio"] + label:focus,
-.modal-form input[type="radio"] + label:active {
+.modal-form input[type="radio"]:hover + label,
+.modal-form input[type="radio"]:focus + label,
+.modal-form input[type="radio"]:active + label,
+.modal-form input[type="radio"]:checked:hover + label,
+.modal-form input[type="radio"]:checked:focus + label,
+.modal-form input[type="radio"]:checked:active + label {
   border: 2px solid $color-primary;
 }
 
 .modal-form input[type="radio"]:checked + label {
   border: 2px solid $color-primary;
+}
+
+.modal-form input[type="radio"]:disabled + label,
+.modal-form input[type="radio"]:disabled:hover + label,
+.modal-form input[type="radio"]:disabled:focus + label,
+.modal-form input[type="radio"]:disabled:active + label {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .modal-form__btn {

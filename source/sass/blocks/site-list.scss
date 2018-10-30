@@ -245,11 +245,11 @@
   padding-bottom: 17px;
   text-align: center;
 
-  &:hover {
+  &:hover[href] {
     opacity: 0.6;
   }
 
-  &:active {
+  &:active[href] {
     opacity: 0.3;
   }
 

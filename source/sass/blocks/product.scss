@@ -3,8 +3,10 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: -25px;
+    margin-right: -25px;
   }
 }
 
@@ -28,9 +30,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 30%;
+    width: 28.6%;
     flex-direction: column;
-    margin-bottom: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 30px;
   }
 }
 

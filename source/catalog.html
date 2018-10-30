@@ -42,7 +42,7 @@
                   <use xlink:href="img/sprite.svg#sprite-icon-search">
                   </use>
                 </svg>
-                Поиск по сайту
+                <span>Поиск по сайту</span>
               </a>
             <li>
             <li class="site-list__item site-list__item--basket">
@@ -51,7 +51,7 @@
                   <use xlink:href="img/sprite.svg#sprite-icon-cart">
                   </use>
                 </svg>
-                Корзина: пока пуста
+                <span>Корзина: пока пуста</span>
               </a>
             </li>
             <li class="site-list__item site-list-item__promo site-list-item__promo--new">
@@ -230,11 +230,11 @@
         <p class="modal__title">Добавить в корзину</p>
         <span class="modal__label">Выберите размер:</span>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
-          <input type="radio" id="smallsize" name="size" value="small" checked>
+          <input class="visually-hidden" type="radio" id="smallsize" name="size" value="small" checked>
           <label for="smallsize" class="modal-form__item modal-form__item--active">S</label>
-          <input type="radio" id="mediumsize" name="size" value="medium">
+          <input class="visually-hidden" type="radio" id="mediumsize" name="size" value="medium">
           <label for="mediumsize" class="modal-form__item">M</label>
-          <input type="radio" id="largesize" name="size" value="large">
+          <input class="visually-hidden" type="radio" id="largesize" name="size" value="large">
           <label for="largesize" class="modal-form__item">L</label>
           <button type="submit" class="modal-form__btn btn">Добавить</button>
         </form>

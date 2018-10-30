@@ -328,15 +328,15 @@
   }
 }
 
-.form-group__option input[type="radio"] + label:hover::before,
-.form-group__option input[type="checkbox"] + label:hover::before,
-.form-group__option input[type="radio"] + label:focus::before,
-.form-group__option input[type="checkbox"] + label:focus::before {
+.form-group__option input[type="radio"]:hover + label::before,
+.form-group__option input[type="checkbox"]:hover + label::before,
+.form-group__option input[type="radio"]:focus + label::before,
+.form-group__option input[type="checkbox"]:focus + label::before {
   border-color: $color-primary;
 }
 
-.form-group__option input[type="radio"] + label:active::before,
-.form-group__option input[type="checkbox"] + label:active::before {
+.form-group__option input[type="radio"]:active + label::before,
+.form-group__option input[type="checkbox"]:active + label::before {
   border-color: $input-active;
 }
 
